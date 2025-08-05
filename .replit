@@ -1,0 +1,6 @@
+run = "nix run"
+entrypoint = "flake.nix"
+modules = ["nix"]
+
+[nix]
+channel = "stable-24_05"
