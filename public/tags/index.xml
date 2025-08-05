@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on johndoe</title>
+    <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/</link>
+    <description>Recent content in Tags on johndoe</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 13 Jul 2023 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Css</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/css/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Html</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/html/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/html/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/hugo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/markdown/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcodes</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/shortcodes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Emoji</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/emoji/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/emoji/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Text</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/text/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/text/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

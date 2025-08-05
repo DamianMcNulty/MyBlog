@@ -1,6 +1,10 @@
-run = "nix run"
+run = "hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseURL https://MyBlog.damianmcnulty2.repl.co"
 entrypoint = "flake.nix"
 modules = ["nix"]
 
 [nix]
 channel = "stable-24_05"
+
+[[ports]]
+localPort = 443
+externalPort = 80
