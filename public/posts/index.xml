@@ -6,14 +6,21 @@
     <description>Recent content in Posts on Damian McNulty</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 05 Aug 2025 12:08:14 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Aug 2025 23:38:55 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>my new blog post</title>
+      <title></title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/google_analytics/</link>
+      <pubDate>Wed, 06 Aug 2025 23:38:55 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/google_analytics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Setup Replit for new blog</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</link>
       <pubDate>Tue, 05 Aug 2025 12:08:14 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</guid>
-      <description>My first blog</description>
+      <description>title: &amp;ldquo;Blog setup&amp;rdquo; date: 2025-08-06T23:28:46.606Z draft: false tags: [] Link to heading So I read this link to help me setup Replit to use Hugo.&#xA;Build and host your company blog on Replit with Nix and Hugo - DEV Community&#xA;Open replit.nix and append pkgs.hugoto the deps list:&#xA;pkgs.hugo hugo new site --force . cd themes &amp;amp;&amp;amp; git clone https://github.com/panr/hugo-coder &amp;amp;&amp;amp; cd .. Add the following line to the bottom ofÂ config.</description>
     </item>
   </channel>
 </rss>
