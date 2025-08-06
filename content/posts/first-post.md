@@ -11,4 +11,4 @@ externalLink = ""
 series = []
 +++
 
-My first blog
+My first blog post.
