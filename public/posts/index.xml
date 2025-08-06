@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Damian McNulty</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 06 Aug 2025 23:38:55 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 06 Aug 2025 23:56:47 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Robots.txt</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/robots_txt/</link>
+      <pubDate>Wed, 06 Aug 2025 23:56:47 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/robots_txt/</guid>
+      <description>Added enableRobotsTXT = false to the config file</description>
+    </item>
     <item>
       <title>Google Analytics</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/google_analytics/</link>
