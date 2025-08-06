@@ -1,5 +1,5 @@
 baseURL = "http://www.example.com"
-title = "johndoe"
+title = "Damian McNulty"
 theme = "hugo-coder"
 languageCode = "en"
 defaultContentLanguage = "en"
@@ -22,11 +22,11 @@ noClasses = false
 unsafe = true
 
 [params]
-author = "John Doe"
+author = "Damian McNulty"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "John Doe's personal website"
 keywords = "blog,developer,personal"
-info = ["Full Stack DevOps", "Magician"]
+info = ["Full Stack Developer"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"

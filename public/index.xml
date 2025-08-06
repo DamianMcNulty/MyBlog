@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>johndoe</title>
+    <title>Damian McNulty</title>
     <link>https://MyBlog.damianmcnulty2.repl.co:443/</link>
-    <description>Recent content on johndoe</description>
+    <description>Recent content on Damian McNulty</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Tue, 05 Aug 2025 12:08:14 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>my new blog post</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</link>
       <pubDate>Tue, 05 Aug 2025 12:08:14 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</guid>
@@ -79,25 +79,53 @@
       <description>&lt;p&gt;Lorem est tota propiore conpellat pectoribus de pectora summo.&lt;/p&gt;</description>
     </item>
     <item>
+      <title>Autores de Hugo</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/autores/autores-de-hugo/</link>
+      <pubDate>Thu, 05 Jan 2023 01:15:52 +0100</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/autores/autores-de-hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>temas</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/categoria/temas/</link>
+      <pubDate>Wed, 04 Jan 2023 23:21:18 +0100</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/categoria/temas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>sintaxe</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/categoria/sintaxe/</link>
+      <pubDate>Wed, 04 Jan 2023 23:21:06 +0100</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/categoria/sintaxe/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Códigos curtos</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/tags/shortcodes/_index.pt-br/</link>
+      <pubDate>Wed, 04 Jan 2023 11:51:36 +0100</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/tags/shortcodes/_index.pt-br/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>About</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/about/</link>
       <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/about/</guid>
-      <description>Written in Go, Hugo is an open source static site generator available under the Apache Licence 2.0. Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.&#xA;Hugo makes use of a variety of open source projects including:&#xA;https://github.com/yuin/goldmark https://github.</description>
+      <description>Currently, working on my new blog.</description>
     </item>
     <item>
       <title>Contact</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/contact/</guid>
-      <description>Follow me, @johndoe.</description>
+      <description>This could linke to a link.tree contact form.</description>
     </item>
     <item>
       <title>Projects</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/projects/</guid>
-      <description>Nothing to see here&amp;hellip; Move along!</description>
+      <description>Link to github projects.</description>
     </item>
   </channel>
 </rss>
