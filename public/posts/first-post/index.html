@@ -3,7 +3,7 @@
 
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=443&amp;path=livereload" data-no-instant defer></script>
   <title>
-  Setup Replit for new blog · Damian McNulty
+  Setup Replit for my new blog · Damian McNulty
 </title>
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,28 +13,25 @@
 
 
 <meta name="author" content="Damian McNulty">
-<meta name="description" content="title: &ldquo;Blog setup&rdquo; date: 2025-08-06T23:28:46.606Z draft: false tags: [] Link to heading So I read this link to help me setup Replit to use Hugo.
+<meta name="description" content="So I read this link to help me setup Replit to use Hugo.
 Build and host your company blog on Replit with Nix and Hugo - DEV Community
-Open replit.nix and append pkgs.hugoto the deps list:
-pkgs.hugo hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom ofÂ config.">
+Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom of `config.toml`: theme = &#39;hugo-coder&#39; Add: run = &#34;hugo server --buildDrafts --buildFuture --bind 0.">
 <meta name="keywords" content="blog,developer,personal">
 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Setup Replit for new blog">
-  <meta name="twitter:description" content="title: “Blog setup” date: 2025-08-06T23:28:46.606Z draft: false tags: [] Link to heading So I read this link to help me setup Replit to use Hugo.
+  <meta name="twitter:title" content="Setup Replit for my new blog">
+  <meta name="twitter:description" content="So I read this link to help me setup Replit to use Hugo.
 Build and host your company blog on Replit with Nix and Hugo - DEV Community
-Open replit.nix and append pkgs.hugoto the deps list:
-pkgs.hugo hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom ofÂ config.">
+Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom of `config.toml`: theme = &#39;hugo-coder&#39; Add: run = &#34;hugo server --buildDrafts --buildFuture --bind 0.">
 
 <meta property="og:url" content="https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/">
   <meta property="og:site_name" content="Damian McNulty">
-  <meta property="og:title" content="Setup Replit for new blog">
-  <meta property="og:description" content="title: “Blog setup” date: 2025-08-06T23:28:46.606Z draft: false tags: [] Link to heading So I read this link to help me setup Replit to use Hugo.
+  <meta property="og:title" content="Setup Replit for my new blog">
+  <meta property="og:description" content="So I read this link to help me setup Replit to use Hugo.
 Build and host your company blog on Replit with Nix and Hugo - DEV Community
-Open replit.nix and append pkgs.hugoto the deps list:
-pkgs.hugo hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom ofÂ config.">
+Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom of `config.toml`: theme = &#39;hugo-coder&#39; Add: run = &#34;hugo server --buildDrafts --buildFuture --bind 0.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -156,7 +153,7 @@ pkgs.hugo hugo new site --force . cd themes &amp;&amp; git clone https://github.
         <div class="post-title">
           <h1 class="title">
             <a class="title-link" href="https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/">
-              Setup Replit for new blog
+              Setup Replit for my new blog
             </a>
           </h1>
         </div>
@@ -181,27 +178,22 @@ pkgs.hugo hugo new site --force . cd themes &amp;&amp; git clone https://github.
 
       <div class="post-content">
         
-        <hr>
-<h2 id="tags-">
-  title: &ldquo;Blog setup&rdquo;
-date: 2025-08-06T23:28:46.606Z
-draft: false
-tags: []
-  <a class="heading-link" href="#tags-">
-    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
-    <span class="sr-only">Link to heading</span>
-  </a>
-</h2>
-<p>So I read this link to help me setup Replit to use Hugo.</p>
+        <p>So I read this link to help me setup Replit to use Hugo.</p>
 <p><a href="https://dev.to/ritza/build-and-host-your-company-blog-on-replit-with-nix-and-hugo-k1c"  class="external-link" target="_blank" rel="noopener">Build and host your company blog on Replit with Nix and Hugo - DEV Community</a></p>
-<p>Open <code>replit.nix</code> and append <code>pkgs.hugo</code>to the <code>deps</code> list:</p>
-<pre tabindex="0"><code>pkgs.hugo
-</code></pre><pre tabindex="0"><code>hugo new site --force .
-</code></pre><pre tabindex="0"><code>cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd ..
-</code></pre><p>Add the following line to the bottom ofÂ <code>config.toml</code>:</p>
-<pre tabindex="0"><code>theme = &#39;hugo-coder&#39;
-</code></pre><pre tabindex="0"><code>run = &#34;hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseURL https://YOUR-REPL-NAME-HERE.YOUR-USERNAME-HERE.repl.co&#34;
-</code></pre><pre tabindex="0"><code>hugo new posts/first-post.md
+<pre tabindex="0"><code>Open `replit.nix` and append `pkgs.hugo`to the `deps` list
+
+In the shell, run:
+hugo new site --force .
+cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd ..
+
+Add the following line to the bottom of `config.toml`:
+theme = &#39;hugo-coder&#39;
+
+Add:
+run = &#34;hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseURL https://YOUR-REPL-NAME-HERE.YOUR-USERNAME-HERE.repl.co&#34;
+
+In the shell, run this to create new posts:
+hugo new posts/first-post.md
 </code></pre>
       </div>
 

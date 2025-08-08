@@ -23,11 +23,11 @@
       <description>Added the following to config.toml to setup Google Analytics:&#xA;[params.googleTagManager] id = &amp;ldquo;id&amp;hellip;&amp;rdquo;</description>
     </item>
     <item>
-      <title>Setup Replit for new blog</title>
+      <title>Setup Replit for my new blog</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</link>
       <pubDate>Tue, 05 Aug 2025 12:08:14 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</guid>
-      <description>title: &amp;ldquo;Blog setup&amp;rdquo; date: 2025-08-06T23:28:46.606Z draft: false tags: [] Link to heading So I read this link to help me setup Replit to use Hugo.&#xA;Build and host your company blog on Replit with Nix and Hugo - DEV Community&#xA;Open replit.nix and append pkgs.hugoto the deps list:&#xA;pkgs.hugo hugo new site --force . cd themes &amp;amp;&amp;amp; git clone https://github.com/panr/hugo-coder &amp;amp;&amp;amp; cd .. Add the following line to the bottom ofÂ config.</description>
+      <description>So I read this link to help me setup Replit to use Hugo.&#xA;Build and host your company blog on Replit with Nix and Hugo - DEV Community&#xA;Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;amp;&amp;amp; git clone https://github.com/panr/hugo-coder &amp;amp;&amp;amp; cd .. Add the following line to the bottom of `config.toml`: theme = &amp;#39;hugo-coder&amp;#39; Add: run = &amp;#34;hugo server --buildDrafts --buildFuture --bind 0.</description>
     </item>
     <item>
       <title>Autores de Hugo</title>
