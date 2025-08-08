@@ -111,6 +111,10 @@ customRemoteJS = []
 # [params.onedollarstats]
 # id = "data-site-id"
 
+# Add meta robots tag to prevent indexing
+[params.robots]
+noindex = true
+
 # If you want to implement a Content-Security-Policy, add this section
 # [params.csp]
 # childsrc = ["'self'"]
@@ -135,7 +139,7 @@ customRemoteJS = []
 # # connect-src directive – defines valid targets for to XMLHttpRequest (AJAX), WebSockets or EventSource
 # connectsrc = ["'self'", "https://www.google-analytics.com"]
 
-enableRobotsTXT = false
+enableRobotsTXT = true
 
 [taxonomies]
 category = "categories"
