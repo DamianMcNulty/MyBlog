@@ -1,11 +1,11 @@
 
 +++
 draft = false
-date = 2025-01-08T01:30:00Z
+date = 2025-08-08T01:30:00Z
 title = "Automating Your Workflow: From GitHub Commits to Netlify Deployments"
 description = "Learn how to set up automatic deployments from GitHub to Netlify for seamless continuous integration"
 slug = "github-netlify-deployment"
-authors = ["Tech Blogger"]
+authors = ["Damian McNulty"]
 tags = ["GitHub", "Netlify", "Deployment", "CI/CD", "Automation"]
 categories = ["DevOps", "Web Development"]
 externalLink = ""

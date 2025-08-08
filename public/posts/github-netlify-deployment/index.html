@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=443&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Automating Your Workflow: From GitHub Commits to Netlify Deployments · Damian McNulty
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Damian McNulty">
+<meta name="description" content="Learn how to set up automatic deployments from GitHub to Netlify for seamless continuous integration">
+<meta name="keywords" content="blog,developer,personal">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Automating Your Workflow: From GitHub Commits to Netlify Deployments">
+  <meta name="twitter:description" content="Learn how to set up automatic deployments from GitHub to Netlify for seamless continuous integration">
+
+<meta property="og:url" content="https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/">
+  <meta property="og:site_name" content="Damian McNulty">
+  <meta property="og:title" content="Automating Your Workflow: From GitHub Commits to Netlify Deployments">
+  <meta property="og:description" content="Learn how to set up automatic deployments from GitHub to Netlify for seamless continuous integration">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-08-08T01:30:00+00:00">
+    <meta property="article:modified_time" content="2025-08-08T01:30:00+00:00">
+    <meta property="article:tag" content="GitHub">
+    <meta property="article:tag" content="Netlify">
+    <meta property="article:tag" content="Deployment">
+    <meta property="article:tag" content="CI/CD">
+    <meta property="article:tag" content="Automation">
+
+
+
+
+<link rel="canonical" href="https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="https://MyBlog.damianmcnulty2.repl.co:443/">
+      Damian McNulty
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/about/">About</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/projects/">Projects</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/contact/">Contact me</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/">
+              Automating Your Workflow: From GitHub Commits to Netlify Deployments
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2025-08-08T01:30:00Z">
+                August 8, 2025
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              7-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/damian-mcnulty/">Damian McNulty</a></div>
+
+          <div class="categories">
+  <i class="fa-solid fa-folder" aria-hidden="true"></i>
+    <a href="/categories/devops/">DevOps</a>
+      <span class="separator">•</span>
+    <a href="/categories/web-development/">Web Development</a></div>
+
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/github/">GitHub</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/netlify/">Netlify</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/deployment/">Deployment</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/ci/cd/">CI/CD</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/automation/">Automation</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <h2 id="introduction">
+  Introduction
+  <a class="heading-link" href="#introduction">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>In today&rsquo;s fast-paced development environment, automating your deployment pipeline is essential for maintaining productivity and reducing manual errors. This guide will walk you through setting up an automated workflow that commits your code to GitHub and automatically deploys it to Netlify.</p>
+<h2 id="why-automate-your-deployment">
+  Why Automate Your Deployment?
+  <a class="heading-link" href="#why-automate-your-deployment">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Before diving into the technical details, let&rsquo;s understand why automation matters:</p>
+<ul>
+<li><strong>Consistency</strong>: Every deployment follows the same process</li>
+<li><strong>Speed</strong>: Instant deployments on code changes</li>
+<li><strong>Reliability</strong>: Reduced human error in deployment process</li>
+<li><strong>Scalability</strong>: Handle multiple projects efficiently</li>
+<li><strong>Rollback capability</strong>: Easy to revert problematic deployments</li>
+</ul>
+<h2 id="prerequisites">
+  Prerequisites
+  <a class="heading-link" href="#prerequisites">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Before we begin, ensure you have:</p>
+<ul>
+<li>A GitHub account</li>
+<li>A Netlify account</li>
+<li>Git installed on your local machine</li>
+<li>A project ready for deployment (Hugo, React, Vue, etc.)</li>
+</ul>
+<h2 id="step-1-setting-up-your-github-repository">
+  Step 1: Setting Up Your GitHub Repository
+  <a class="heading-link" href="#step-1-setting-up-your-github-repository">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="creating-a-new-repository">
+  Creating a New Repository
+  <a class="heading-link" href="#creating-a-new-repository">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>Log into your GitHub account</li>
+<li>Click the &ldquo;+&rdquo; icon in the top right corner</li>
+<li>Select &ldquo;New repository&rdquo;</li>
+<li>Choose a descriptive name for your project</li>
+<li>Add a README file and .gitignore if needed</li>
+<li>Click &ldquo;Create repository&rdquo;</li>
+</ol>
+<h3 id="connecting-your-local-project">
+  Connecting Your Local Project
+  <a class="heading-link" href="#connecting-your-local-project">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Initialize git in your project directory</span>
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add your GitHub repository as origin</span>
+</span></span><span class="line"><span class="cl">git remote add origin https://github.com/yourusername/your-repo-name.git
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add all files to staging</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Create your first commit</span>
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;Initial commit: Project setup&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Push to GitHub</span>
+</span></span><span class="line"><span class="cl">git push -u origin main
+</span></span></code></pre></div><h3 id="best-practices-for-commits">
+  Best Practices for Commits
+  <a class="heading-link" href="#best-practices-for-commits">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<h4 id="commit-message-structure">
+  Commit Message Structure
+  <a class="heading-link" href="#commit-message-structure">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<p>Follow this format for clear, professional commit messages:</p>
+<pre tabindex="0"><code>type(scope): description
+
+[optional body]
+
+[optional footer]
+</code></pre><p><strong>Example:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">git commit -m <span class="s2">&#34;feat(blog): add GitHub deployment tutorial
+</span></span></span><span class="line"><span class="cl"><span class="s2">
+</span></span></span><span class="line"><span class="cl"><span class="s2">- Added comprehensive guide for GitHub to Netlify workflow
+</span></span></span><span class="line"><span class="cl"><span class="s2">- Included code examples and best practices
+</span></span></span><span class="line"><span class="cl"><span class="s2">- Added troubleshooting section&#34;</span>
+</span></span></code></pre></div><h4 id="commit-types">
+  Commit Types
+  <a class="heading-link" href="#commit-types">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h4>
+<ul>
+<li><strong>feat</strong>: New features</li>
+<li><strong>fix</strong>: Bug fixes</li>
+<li><strong>docs</strong>: Documentation changes</li>
+<li><strong>style</strong>: Code formatting changes</li>
+<li><strong>refactor</strong>: Code restructuring</li>
+<li><strong>test</strong>: Adding or modifying tests</li>
+<li><strong>chore</strong>: Maintenance tasks</li>
+</ul>
+<h2 id="step-2-preparing-your-project-for-netlify">
+  Step 2: Preparing Your Project for Netlify
+  <a class="heading-link" href="#step-2-preparing-your-project-for-netlify">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="build-configuration">
+  Build Configuration
+  <a class="heading-link" href="#build-configuration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Create a <code>netlify.toml</code> file in your project root:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">publish</span> <span class="p">=</span> <span class="s2">&#34;public&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">command</span> <span class="p">=</span> <span class="s2">&#34;hugo --gc --minify&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">.</span><span class="nx">environment</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">HUGO_VERSION</span> <span class="p">=</span> <span class="s2">&#34;0.126.1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">HUGO_ENV</span> <span class="p">=</span> <span class="s2">&#34;production&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">HUGO_ENABLEGITINFO</span> <span class="p">=</span> <span class="s2">&#34;true&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">context</span><span class="p">.</span><span class="nx">production</span><span class="p">.</span><span class="nx">environment</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">HUGO_BASEURL</span> <span class="p">=</span> <span class="s2">&#34;https://your-site-name.netlify.app/&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">context</span><span class="p">.</span><span class="nx">deploy-preview</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">command</span> <span class="p">=</span> <span class="s2">&#34;hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">context</span><span class="p">.</span><span class="nx">branch-deploy</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">command</span> <span class="p">=</span> <span class="s2">&#34;hugo --gc --minify -b $DEPLOY_PRIME_URL&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">for</span> <span class="p">=</span> <span class="s2">&#34;/*&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">X-Frame-Options</span> <span class="p">=</span> <span class="s2">&#34;DENY&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">X-XSS-Protection</span> <span class="p">=</span> <span class="s2">&#34;1; mode=block&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">X-Content-Type-Options</span> <span class="p">=</span> <span class="s2">&#34;nosniff&#34;</span>
+</span></span></code></pre></div><h3 id="environment-variables">
+  Environment Variables
+  <a class="heading-link" href="#environment-variables">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For projects requiring environment variables:</p>
+<ol>
+<li>Create a <code>.env.example</code> file with placeholder values</li>
+<li>Add <code>.env</code> to your <code>.gitignore</code></li>
+<li>Set actual values in Netlify&rsquo;s dashboard</li>
+</ol>
+<p>Example <code>.env.example</code>:</p>
+<pre tabindex="0"><code>API_KEY=your_api_key_here
+DATABASE_URL=your_database_url_here
+</code></pre><h2 id="step-3-connecting-github-to-netlify">
+  Step 3: Connecting GitHub to Netlify
+  <a class="heading-link" href="#step-3-connecting-github-to-netlify">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="initial-setup">
+  Initial Setup
+  <a class="heading-link" href="#initial-setup">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>
+<p><strong>Login to Netlify</strong></p>
+<ul>
+<li>Go to <a href="https://netlify.com"  class="external-link" target="_blank" rel="noopener">netlify.com</a></li>
+<li>Sign up or login with your GitHub account</li>
+</ul>
+</li>
+<li>
+<p><strong>Import Your Repository</strong></p>
+<ul>
+<li>Click &ldquo;New site from Git&rdquo;</li>
+<li>Choose &ldquo;GitHub&rdquo; as your provider</li>
+<li>Authorize Netlify to access your repositories</li>
+<li>Select your project repository</li>
+</ul>
+</li>
+<li>
+<p><strong>Configure Build Settings</strong></p>
+<ul>
+<li><strong>Branch to deploy</strong>: <code>main</code> (or your default branch)</li>
+<li><strong>Build command</strong>: <code>hugo --gc --minify</code></li>
+<li><strong>Publish directory</strong>: <code>public</code></li>
+</ul>
+</li>
+<li>
+<p><strong>Deploy Your Site</strong></p>
+<ul>
+<li>Click &ldquo;Deploy site&rdquo;</li>
+<li>Netlify will assign a random subdomain</li>
+<li>You can customize this later in site settings</li>
+</ul>
+</li>
+</ol>
+<h3 id="custom-domain-setup-optional">
+  Custom Domain Setup (Optional)
+  <a class="heading-link" href="#custom-domain-setup-optional">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>Go to &ldquo;Domain settings&rdquo; in your Netlify dashboard</li>
+<li>Click &ldquo;Add custom domain&rdquo;</li>
+<li>Enter your domain name</li>
+<li>Follow DNS configuration instructions</li>
+<li>Enable HTTPS (automatic with Let&rsquo;s Encrypt)</li>
+</ol>
+<h2 id="step-4-automated-deployment-workflow">
+  Step 4: Automated Deployment Workflow
+  <a class="heading-link" href="#step-4-automated-deployment-workflow">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="how-it-works">
+  How It Works
+  <a class="heading-link" href="#how-it-works">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Once connected, your workflow becomes:</p>
+<pre tabindex="0"><code class="language-mermaid" data-lang="mermaid">graph LR
+    A[Local Development] --&gt; B[Git Commit]
+    B --&gt; C[Git Push to GitHub]
+    C --&gt; D[GitHub Webhook]
+    D --&gt; E[Netlify Build Triggered]
+    E --&gt; F[Site Deployed]
+    F --&gt; G[Live Website Updated]
+</code></pre><h3 id="triggering-deployments">
+  Triggering Deployments
+  <a class="heading-link" href="#triggering-deployments">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Every time you push to your connected branch:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Make your changes</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;feat(content): add new blog post about deployment&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin main
+</span></span></code></pre></div><p>Netlify automatically:</p>
+<ol>
+<li>Detects the change via webhook</li>
+<li>Pulls the latest code</li>
+<li>Runs your build command</li>
+<li>Deploys to your live site</li>
+<li>Sends you a notification</li>
+</ol>
+<h3 id="branch-deployments">
+  Branch Deployments
+  <a class="heading-link" href="#branch-deployments">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Netlify can create preview deployments for feature branches:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Create a feature branch</span>
+</span></span><span class="line"><span class="cl">git checkout -b feature/new-design
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Make changes and commit</span>
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m <span class="s2">&#34;feat(design): implement new homepage layout&#34;</span>
+</span></span><span class="line"><span class="cl">git push origin feature/new-design
+</span></span></code></pre></div><p>This creates a preview URL like: <code>https://deploy-preview-123--your-site.netlify.app</code></p>
+<h2 id="step-5-advanced-configuration">
+  Step 5: Advanced Configuration
+  <a class="heading-link" href="#step-5-advanced-configuration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="build-hooks">
+  Build Hooks
+  <a class="heading-link" href="#build-hooks">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For external triggers, create build hooks:</p>
+<ol>
+<li>Go to &ldquo;Site settings&rdquo; → &ldquo;Build &amp; deploy&rdquo;</li>
+<li>Scroll to &ldquo;Build hooks&rdquo;</li>
+<li>Click &ldquo;Add build hook&rdquo;</li>
+<li>Name it and select the branch</li>
+<li>Use the webhook URL to trigger builds programmatically</li>
+</ol>
+<p>Example usage:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">curl -X POST -d <span class="o">{}</span> https://api.netlify.com/build_hooks/your-hook-id
+</span></span></code></pre></div><h3 id="deploy-previews-for-pull-requests">
+  Deploy Previews for Pull Requests
+  <a class="heading-link" href="#deploy-previews-for-pull-requests">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Enable automatic previews for code reviews:</p>
+<ol>
+<li>In Netlify dashboard, go to &ldquo;Site settings&rdquo;</li>
+<li>Navigate to &ldquo;Build &amp; deploy&rdquo; → &ldquo;Deploy contexts&rdquo;</li>
+<li>Enable &ldquo;Deploy previews&rdquo;</li>
+<li>Configure &ldquo;Branch deploys&rdquo; as needed</li>
+</ol>
+<h3 id="notifications">
+  Notifications
+  <a class="heading-link" href="#notifications">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Set up deployment notifications:</p>
+<ol>
+<li>Go to &ldquo;Site settings&rdquo; → &ldquo;Build &amp; deploy&rdquo; → &ldquo;Deploy notifications&rdquo;</li>
+<li>Add notifications for:
+<ul>
+<li>Deploy started</li>
+<li>Deploy succeeded</li>
+<li>Deploy failed</li>
+</ul>
+</li>
+<li>Choose notification methods (email, Slack, webhook)</li>
+</ol>
+<h2 id="step-6-monitoring-and-optimization">
+  Step 6: Monitoring and Optimization
+  <a class="heading-link" href="#step-6-monitoring-and-optimization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="build-performance">
+  Build Performance
+  <a class="heading-link" href="#build-performance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Monitor your build times and optimize:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># In netlify.toml - optimize Hugo builds</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">command</span> <span class="p">=</span> <span class="s2">&#34;hugo --gc --minify --enableGitInfo&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">build</span><span class="p">.</span><span class="nx">environment</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">HUGO_VERSION</span> <span class="p">=</span> <span class="s2">&#34;0.126.1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">GO_VERSION</span> <span class="p">=</span> <span class="s2">&#34;1.19&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">NODE_VERSION</span> <span class="p">=</span> <span class="s2">&#34;18&#34;</span>
+</span></span></code></pre></div><h3 id="build-analytics">
+  Build Analytics
+  <a class="heading-link" href="#build-analytics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Track your deployments:</p>
+<ul>
+<li>Build frequency</li>
+<li>Build duration</li>
+<li>Success/failure rates</li>
+<li>Popular deploy times</li>
+</ul>
+<h3 id="cache-optimization">
+  Cache Optimization
+  <a class="heading-link" href="#cache-optimization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Leverage Netlify&rsquo;s edge caching:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">for</span> <span class="p">=</span> <span class="s2">&#34;/css/*&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Cache-Control</span> <span class="p">=</span> <span class="s2">&#34;public, max-age=31536000&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">for</span> <span class="p">=</span> <span class="s2">&#34;/js/*&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Cache-Control</span> <span class="p">=</span> <span class="s2">&#34;public, max-age=31536000&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">for</span> <span class="p">=</span> <span class="s2">&#34;/images/*&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Cache-Control</span> <span class="p">=</span> <span class="s2">&#34;public, max-age=31536000&#34;</span>
+</span></span></code></pre></div><h2 id="troubleshooting-common-issues">
+  Troubleshooting Common Issues
+  <a class="heading-link" href="#troubleshooting-common-issues">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="build-failures">
+  Build Failures
+  <a class="heading-link" href="#build-failures">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Issue</strong>: Build command not found</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Solution: Specify exact versions in netlify.toml</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>build.environment<span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nv">HUGO_VERSION</span> <span class="o">=</span> <span class="s2">&#34;0.126.1&#34;</span>
+</span></span></code></pre></div><p><strong>Issue</strong>: Missing dependencies</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Solution: Add to netlify.toml</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span>build<span class="o">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nb">command</span> <span class="o">=</span> <span class="s2">&#34;npm install &amp;&amp; hugo --gc --minify&#34;</span>
+</span></span></code></pre></div><h3 id="git-issues">
+  Git Issues
+  <a class="heading-link" href="#git-issues">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Issue</strong>: Large file uploads</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Solution: Use Git LFS for large files</span>
+</span></span><span class="line"><span class="cl">git lfs track <span class="s2">&#34;*.jpg&#34;</span>
+</span></span><span class="line"><span class="cl">git lfs track <span class="s2">&#34;*.png&#34;</span>
+</span></span><span class="line"><span class="cl">git lfs track <span class="s2">&#34;*.pdf&#34;</span>
+</span></span></code></pre></div><p><strong>Issue</strong>: Merge conflicts</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Solution: Proper branching strategy</span>
+</span></span><span class="line"><span class="cl">git checkout main
+</span></span><span class="line"><span class="cl">git pull origin main
+</span></span><span class="line"><span class="cl">git checkout your-feature-branch
+</span></span><span class="line"><span class="cl">git rebase main
+</span></span></code></pre></div><h3 id="performance-issues">
+  Performance Issues
+  <a class="heading-link" href="#performance-issues">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Issue</strong>: Slow builds</p>
+<ul>
+<li>Minimize image sizes</li>
+<li>Use Hugo&rsquo;s image processing</li>
+<li>Implement proper caching</li>
+<li>Remove unused dependencies</li>
+</ul>
+<h2 id="security-considerations">
+  Security Considerations
+  <a class="heading-link" href="#security-considerations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="environment-variables-1">
+  Environment Variables
+  <a class="heading-link" href="#environment-variables-1">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Never commit sensitive data:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Add to .gitignore</span>
+</span></span><span class="line"><span class="cl">.env
+</span></span><span class="line"><span class="cl">.env.local
+</span></span><span class="line"><span class="cl">.env.production
+</span></span></code></pre></div><p>Use Netlify&rsquo;s environment variable interface for sensitive data.</p>
+<h3 id="https-configuration">
+  HTTPS Configuration
+  <a class="heading-link" href="#https-configuration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Ensure HTTPS is enabled:</p>
+<ul>
+<li>Automatic with Netlify domains</li>
+<li>Free Let&rsquo;s Encrypt certificates</li>
+<li>Custom domain SSL support</li>
+</ul>
+<h3 id="content-security-policy">
+  Content Security Policy
+  <a class="heading-link" href="#content-security-policy">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Implement CSP headers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[[</span><span class="nx">headers</span><span class="p">]]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">for</span> <span class="p">=</span> <span class="s2">&#34;/*&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">[</span><span class="nx">headers</span><span class="p">.</span><span class="nx">values</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Content-Security-Policy</span> <span class="p">=</span> <span class="s2">&#34;default-src &#39;self&#39;; script-src &#39;self&#39; &#39;unsafe-inline&#39;&#34;</span>
+</span></span></code></pre></div><h2 id="best-practices-summary">
+  Best Practices Summary
+  <a class="heading-link" href="#best-practices-summary">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="development-workflow">
+  Development Workflow
+  <a class="heading-link" href="#development-workflow">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>Create feature branches for new work</li>
+<li>Write descriptive commit messages</li>
+<li>Test locally before pushing</li>
+<li>Use pull requests for code review</li>
+<li>Merge only after approval</li>
+</ol>
+<h3 id="deployment-strategy">
+  Deployment Strategy
+  <a class="heading-link" href="#deployment-strategy">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>Use staging environments for testing</li>
+<li>Implement proper error handling</li>
+<li>Monitor build performance</li>
+<li>Set up proper notifications</li>
+<li>Regular backup strategies</li>
+</ol>
+<h3 id="code-organization">
+  Code Organization
+  <a class="heading-link" href="#code-organization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ol>
+<li>Keep dependencies updated</li>
+<li>Use semantic versioning</li>
+<li>Document configuration changes</li>
+<li>Maintain clean Git history</li>
+<li>Regular security audits</li>
+</ol>
+<h2 id="conclusion">
+  Conclusion
+  <a class="heading-link" href="#conclusion">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Setting up automated deployments from GitHub to Netlify transforms your development workflow, making it more efficient and reliable. This integration provides:</p>
+<ul>
+<li><strong>Instant feedback</strong> on code changes</li>
+<li><strong>Collaborative workflows</strong> with deploy previews</li>
+<li><strong>Professional deployment pipeline</strong> without complex setup</li>
+<li><strong>Scalable solution</strong> that grows with your project</li>
+</ul>
+<p>The time invested in setting up this automation pays dividends in increased productivity and reduced deployment stress. Whether you&rsquo;re working on a personal blog, a client project, or a team application, this workflow provides the foundation for modern web development practices.</p>
+<p>Remember to regularly review and update your deployment configuration as your project evolves. Happy coding and deploying!</p>
+<hr>
+<p><em>Have questions about setting up your deployment pipeline? Feel free to reach out or check the official documentation for <a href="https://docs.github.com"  class="external-link" target="_blank" rel="noopener">GitHub</a> and <a href="https://docs.netlify.com"  class="external-link" target="_blank" rel="noopener">Netlify</a>.</em></p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2025
+     Damian McNulty 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-2DN28MH8R3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-2DN28MH8R3');
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
