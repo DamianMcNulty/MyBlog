@@ -15,5 +15,12 @@
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</guid>
       <description>Introduction Link to heading In today&amp;rsquo;s fast-paced development environment, automating your deployment pipeline is essential for maintaining productivity and reducing manual errors. This guide will walk you through setting up an automated workflow that commits your code to GitHub and automatically deploys it to Netlify.&#xA;Why Automate Your Deployment? Link to heading Before diving into the technical details, let&amp;rsquo;s understand why automation matters:&#xA;Consistency: Every deployment follows the same process Speed: Instant deployments on code changes Reliability: Reduced human error in deployment process Scalability: Handle multiple projects efficiently Rollback capability: Easy to revert problematic deployments Prerequisites Link to heading Before we begin, ensure you have:</description>
     </item>
+    <item>
+      <title>Example: Dual Content Post</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/example-dual-content/</link>
+      <pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/example-dual-content/</guid>
+      <description>Understanding Hugo: A Personal Journey Link to heading When I first discovered Hugo, I was struggling with the slow build times of my Jekyll blog. Every time I wanted to preview a change, I had to wait several minutes for the site to rebuild. This was frustrating and killed my writing momentum.&#xA;Why I Chose Hugo Link to heading After researching various static site generators, Hugo stood out for several practical reasons:</description>
+    </item>
   </channel>
 </rss>

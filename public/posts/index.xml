@@ -36,5 +36,12 @@
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</guid>
       <description>So I read this link to help me setup Replit to use Hugo.&#xA;Build and host your company blog on Replit with Nix and Hugo - DEV Community&#xA;Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;amp;&amp;amp; git clone https://github.com/panr/hugo-coder &amp;amp;&amp;amp; cd .. Add the following line to the bottom of `config.toml`: theme = &amp;#39;hugo-coder&amp;#39; Add: run = &amp;#34;hugo server --buildDrafts --buildFuture --bind 0.</description>
     </item>
+    <item>
+      <title>Example: Dual Content Post</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/example-dual-content/</link>
+      <pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/example-dual-content/</guid>
+      <description>Understanding Hugo: A Personal Journey Link to heading When I first discovered Hugo, I was struggling with the slow build times of my Jekyll blog. Every time I wanted to preview a change, I had to wait several minutes for the site to rebuild. This was frustrating and killed my writing momentum.&#xA;Why I Chose Hugo Link to heading After researching various static site generators, Hugo stood out for several practical reasons:</description>
+    </item>
   </channel>
 </rss>
