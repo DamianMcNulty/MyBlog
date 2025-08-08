@@ -1,0 +1,89 @@
+
+{{ define "title" }}
+  {{ .Title }} · {{ .Site.Title }}
+{{ end }}
+{{ define "content" }}
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="{{ .Permalink }}">
+              {{ .Title }}
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+                {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") }}
+              </time>
+            </span>
+          </div>
+          {{ with .Params.categories }}
+            <div class="categories">
+              <i class="fa-solid fa-folder" aria-hidden="true"></i>
+              {{ range . }}
+                <a href="{{ "/categories/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+                {{ if ne . (index (last 1 $.Params.categories) 0) }}, {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+          {{ with .Params.tags }}
+            <div class="tags">
+              <i class="fa-solid fa-tag" aria-hidden="true"></i>
+              {{ range . }}
+                <a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}/">{{ . }}</a>
+                {{ if ne . (index (last 1 $.Params.tags) 0) }}, {{ end }}
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </header>
+
+      <!-- Content Mode Indicator -->
+      <div class="content-mode-indicator" style="text-align: center; margin: 1rem 0; padding: 0.5rem; background-color: rgba(66, 165, 245, 0.1); border-radius: 4px;">
+        <span class="content-mode-label">✏️ Original Content</span>
+        <p style="font-size: 0.9em; margin: 0.5rem 0 0 0; opacity: 0.8;">
+          💡 Toggle dark mode to switch between AI-generated and original content
+        </p>
+      </div>
+
+      <!-- Original Content (shown in light mode) -->
+      <div data-content-type="original" class="post-content">
+        {{ .Content }}
+      </div>
+
+      <!-- AI Generated Content (shown in dark mode) -->
+      <div data-content-type="ai" class="post-content" style="display: none;">
+        {{ if .Params.ai_content }}
+          {{ .Params.ai_content | markdownify }}
+        {{ else }}
+          <div style="padding: 2rem; text-align: center; background-color: rgba(66, 165, 245, 0.1); border-radius: 8px;">
+            <h3>🤖 AI Content Not Available</h3>
+            <p>No AI-generated version has been created for this post yet.</p>
+            <p><em>Add "ai_content" to the front matter to enable AI content switching.</em></p>
+          </div>
+        {{ end }}
+      </div>
+    </article>
+
+    {{ partial "posts/series.html" . }}
+    {{ partial "posts/math.html" . }}
+    
+    <!-- Navigation between posts -->
+    {{ $related := .Site.RegularPages.Related . | first 5 }}
+    {{ with $related }}
+      <div class="related-posts">
+        <h4>Related Posts</h4>
+        <ul>
+          {{ range . }}
+            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </section>
+{{ end }}

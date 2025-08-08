@@ -51,7 +51,7 @@ customCSS = []
 customSCSS = []
 
 # Custom JS
-customJS = []
+customJS = ["js/content-switcher.js"]
 
 # Custom remote JS files
 customRemoteJS = []

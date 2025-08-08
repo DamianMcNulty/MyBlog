@@ -1,0 +1,105 @@
+/* Light mode for post navigation */
+.post .post-nav {
+  background-color: #f8f9fa;
+  border-top: 1px solid #dee2e6;
+}
+
+.post .post-nav a {
+  color: #007bff;
+}
+
+.post .post-nav a:hover {
+  color: #0056b3;
+}
+
+/* Content mode indicator styling */
+.content-mode-indicator {
+  transition: all 0.3s ease;
+  border: 1px solid rgba(66, 165, 245, 0.3);
+}
+
+.content-mode-label {
+  font-weight: bold;
+  font-size: 1.1em;
+  display: inline-block;
+}
+
+/* Smooth content transitions */
+[data-content-type] {
+  transition: opacity 0.3s ease;
+}
+
+/* Dark mode adjustments for content indicator */
+body.colorscheme-dark .content-mode-indicator,
+body.colorscheme-auto .content-mode-indicator {
+  background-color: rgba(66, 165, 245, 0.15);
+  border-color: rgba(66, 165, 245, 0.5);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .content-mode-indicator {
+    background-color: rgba(66, 165, 245, 0.15);
+    border-color: rgba(66, 165, 245, 0.5);
+  }
+}
+
+/* Related posts styling */
+.related-posts {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #dee2e6;
+}
+
+.related-posts h4 {
+  margin-bottom: 1rem;
+  color: #495057;
+}
+
+.related-posts ul {
+  list-style: none;
+  padding: 0;
+}
+
+.related-posts li {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+}
+
+.related-posts a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.related-posts a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Dark mode for related posts */
+body.colorscheme-dark .related-posts {
+  border-top-color: #424242;
+}
+
+body.colorscheme-dark .related-posts h4 {
+  color: #dadada;
+}
+
+body.colorscheme-dark .related-posts li {
+  background-color: #424242;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .related-posts {
+    border-top-color: #424242;
+  }
+
+  body.colorscheme-auto .related-posts h4 {
+    color: #dadada;
+  }
+
+  body.colorscheme-auto .related-posts li {
+    background-color: #424242;
+  }
+}
