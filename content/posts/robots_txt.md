@@ -11,5 +11,15 @@ externalLink = ""
 series = []
 +++
 
-Added enableRobotsTXT = false to the config file
+Added enableRobotsTXT = true to the config.toml file
+
+And:
+[params.robots]
+noindex = true
+
+Added robots.txt to the static folder with:
+
+User-agent: *
+Disallow: /
+
 

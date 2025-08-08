@@ -1,6 +1,6 @@
 
 +++
-draft = false
+draft = true
 date = 2025-08-08T01:30:00Z
 title = "Automating Your Workflow: From GitHub Commits to Netlify Deployments"
 description = "Learn how to set up automatic deployments from GitHub to Netlify for seamless continuous integration"
