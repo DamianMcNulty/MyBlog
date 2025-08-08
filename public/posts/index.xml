@@ -20,7 +20,7 @@
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/robots_txt/</link>
       <pubDate>Wed, 06 Aug 2025 23:56:47 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/robots_txt/</guid>
-      <description>Added enableRobotsTXT = false to the config file</description>
+      <description>Added enableRobotsTXT = true to the config.toml file&#xA;And: [params.robots] noindex = true&#xA;Added robots.txt to the static folder with:&#xA;User-agent: * Disallow: /</description>
     </item>
     <item>
       <title>Google Analytics</title>
