@@ -1,4 +1,3 @@
-
 {{ define "title" }}
   {{ .Title }} · {{ .Site.Title }}
 {{ end }}
@@ -57,11 +56,13 @@
       </div>
 
       <!-- AI Generated Content (shown in dark mode) -->
+      {{ if .Params.ai_content }}
+      <div data-ai-content="{{ .Params.ai_content | markdownify | htmlEscape }}" data-content-type="ai" class="post-content" style="display: none;">
+        {{ .Params.ai_content | markdownify }}
+      </div>
+      {{ else }}
       <div data-content-type="ai" class="post-content" style="display: none;">
-        {{ if .Params.ai_content }}
-          {{ .Params.ai_content | markdownify }}
-        {{ else }}
-          <div style="padding: 2rem; text-align: center; background-color: rgba(66, 165, 245, 0.1); border-radius: 8px;">
+        <div style="padding: 2rem; text-align: center; background-color: rgba(66, 165, 245, 0.1); border-radius: 8px;">
             <h3>🤖 AI Content Not Available</h3>
             <p>No AI-generated version has been created for this post yet.</p>
             <p><em>Add "ai_content" to the front matter to enable AI content switching.</em></p>
@@ -72,7 +73,7 @@
 
     {{ partial "posts/series.html" . }}
     {{ partial "posts/math.html" . }}
-    
+
     <!-- Navigation between posts -->
     {{ $related := .Site.RegularPages.Related . | first 5 }}
     {{ with $related }}
