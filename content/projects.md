@@ -1,5 +1,6 @@
 +++
 title = "Projects"
+date = "2025-08-09"
 slug = "projects"
 ai_content = """
 # Technical Projects Portfolio

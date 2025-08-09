@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/about/</loc>
+    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/contact/</loc>
+    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/</loc>
+    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/projects/</loc>
+    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</loc>
     <lastmod>2025-08-08T01:30:00+00:00</lastmod>
   </url><url>
@@ -9,9 +21,6 @@
     <lastmod>2025-08-08T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/ci/cd/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/</loc>
     <lastmod>2025-08-08T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/authors/damian-mcnulty/</loc>
@@ -79,13 +88,6 @@
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/</loc>
     <lastmod>2023-01-04T11:51:36+01:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/contact/</loc>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/projects/</loc>
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/series/</loc>
   </url>
