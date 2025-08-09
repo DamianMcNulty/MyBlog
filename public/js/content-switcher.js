@@ -4,21 +4,18 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Content switcher starting...');
     
     // Check if we're on a single post page with AI content
-    const aiContentElement = document.querySelector('[data-ai-content]');
+    const aiContentElement = document.querySelector('[data-content-type="ai"]');
     if (!aiContentElement) {
         console.log('No AI content found on this page');
         return;
     }
 
-    const aiContent = aiContentElement.getAttribute('data-ai-content');
-    const originalContentElement = document.querySelector('.content article');
+    // Get both content elements
+    const originalContentElement = document.querySelector('[data-content-type="original"]');
     if (!originalContentElement) {
-        console.log('Article content not found');
+        console.log('Original content not found');
         return;
     }
-
-    // Store the original content
-    const originalContent = originalContentElement.innerHTML;
 
     function getCurrentTheme() {
         // Check multiple ways the theme might be indicated
@@ -65,18 +62,29 @@ document.addEventListener('DOMContentLoaded', function() {
     function switchContent() {
         const currentTheme = getCurrentTheme();
         const isDark = currentTheme === 'dark';
-        const contentArticle = document.querySelector('.content article');
 
-        if (!contentArticle) return;
-
-        if (isDark && aiContent) {
+        if (isDark) {
             // Show AI content in dark mode
-            contentArticle.innerHTML = aiContent;
+            originalContentElement.style.display = 'none';
+            aiContentElement.style.display = 'block';
             console.log('Switched to AI content (dark mode)');
+            
+            // Update the content mode indicator
+            const indicator = document.querySelector('.content-mode-label');
+            if (indicator) {
+                indicator.textContent = '🤖 AI-Generated Content';
+            }
         } else {
             // Show original content in light mode
-            contentArticle.innerHTML = originalContent;
+            originalContentElement.style.display = 'block';
+            aiContentElement.style.display = 'none';
             console.log('Switched to original content (light mode)');
+            
+            // Update the content mode indicator
+            const indicator = document.querySelector('.content-mode-label');
+            if (indicator) {
+                indicator.textContent = '✏️ Original Content';
+            }
         }
     }
 
