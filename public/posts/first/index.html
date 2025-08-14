@@ -13,22 +13,25 @@
 
 
 <meta name="author" content="Damian McNulty">
-<meta name="description" content="Setting Up Hugo on Replit: A Complete Developer&rsquo;s Guide Link to heading Creating a blog on Replit using Hugo is an excellent choice for developers who want a fast, modern static site generator combined with the convenience of cloud-based development. This comprehensive guide will walk you through the entire setup process and provide insights into optimizing your Hugo blog for Replit&rsquo;s environment.
-Why Hugo &#43; Replit is a Powerful Combination Link to heading Hugo&rsquo;s Advantages:">
+<meta name="description" content="So I read this link to help me setup Replit to use Hugo.
+Build and host your company blog on Replit with Nix and Hugo - DEV Community
+Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom of `config.toml`: theme = &#39;hugo-coder&#39; Add: run = &#34;hugo server --buildDrafts --buildFuture --bind 0.">
 <meta name="keywords" content="blog,developer,personal">
 
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Setup Replit for my new blog">
-  <meta name="twitter:description" content="Setting Up Hugo on Replit: A Complete Developer’s Guide Link to heading Creating a blog on Replit using Hugo is an excellent choice for developers who want a fast, modern static site generator combined with the convenience of cloud-based development. This comprehensive guide will walk you through the entire setup process and provide insights into optimizing your Hugo blog for Replit’s environment.
-Why Hugo &#43; Replit is a Powerful Combination Link to heading Hugo’s Advantages:">
+  <meta name="twitter:description" content="So I read this link to help me setup Replit to use Hugo.
+Build and host your company blog on Replit with Nix and Hugo - DEV Community
+Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom of `config.toml`: theme = &#39;hugo-coder&#39; Add: run = &#34;hugo server --buildDrafts --buildFuture --bind 0.">
 
-<meta property="og:url" content="https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/">
+<meta property="og:url" content="https://MyBlog.damianmcnulty2.repl.co:443/posts/first/">
   <meta property="og:site_name" content="Damian McNulty">
   <meta property="og:title" content="Setup Replit for my new blog">
-  <meta property="og:description" content="Setting Up Hugo on Replit: A Complete Developer’s Guide Link to heading Creating a blog on Replit using Hugo is an excellent choice for developers who want a fast, modern static site generator combined with the convenience of cloud-based development. This comprehensive guide will walk you through the entire setup process and provide insights into optimizing your Hugo blog for Replit’s environment.
-Why Hugo &#43; Replit is a Powerful Combination Link to heading Hugo’s Advantages:">
+  <meta property="og:description" content="So I read this link to help me setup Replit to use Hugo.
+Build and host your company blog on Replit with Nix and Hugo - DEV Community
+Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd .. Add the following line to the bottom of `config.toml`: theme = &#39;hugo-coder&#39; Add: run = &#34;hugo server --buildDrafts --buildFuture --bind 0.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -38,7 +41,7 @@ Why Hugo &#43; Replit is a Powerful Combination Link to heading Hugo’s Advanta
 
 
 
-<link rel="canonical" href="https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/">
+<link rel="canonical" href="https://MyBlog.damianmcnulty2.repl.co:443/posts/first/">
 
 
 <link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
@@ -149,7 +152,7 @@ Why Hugo &#43; Replit is a Powerful Combination Link to heading Hugo’s Advanta
       <header>
         <div class="post-title">
           <h1 class="title">
-            <a class="title-link" href="https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/">
+            <a class="title-link" href="https://MyBlog.damianmcnulty2.repl.co:443/posts/first/">
               Setup Replit for my new blog
             </a>
           </h1>
@@ -162,20 +165,45 @@ Why Hugo &#43; Replit is a Powerful Combination Link to heading Hugo’s Advanta
                 August 9, 2025
               </time>
             </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              4-minute read
-            </span>
           </div>
-          
           
           
         </div>
       </header>
 
-      <div class="post-content">
+      
+      <div class="content-mode-indicator" style="text-align: center; margin: 1rem 0; padding: 0.5rem; background-color: rgba(66, 165, 245, 0.1); border-radius: 4px;">
+        <span class="content-mode-label">✏️ Original Content</span>
+        <p style="font-size: 0.9em; margin: 0.5rem 0 0 0; opacity: 0.8;">
+          💡 Toggle dark mode to switch between AI-generated and original content
+        </p>
+      </div>
+
+      
+      <div data-content-type="original" class="post-content">
+        <p>So I read this link to help me setup Replit to use Hugo.</p>
+<p><a href="https://dev.to/ritza/build-and-host-your-company-blog-on-replit-with-nix-and-hugo-k1c"  class="external-link" target="_blank" rel="noopener">Build and host your company blog on Replit with Nix and Hugo - DEV Community</a></p>
+<pre tabindex="0"><code>Open `replit.nix` and append `pkgs.hugo`to the `deps` list
+
+In the shell, run:
+hugo new site --force .
+cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd ..
+
+Add the following line to the bottom of `config.toml`:
+theme = &#39;hugo-coder&#39;
+
+Add:
+run = &#34;hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseURL https://YOUR-REPL-NAME-HERE.YOUR-USERNAME-HERE.repl.co&#34;
+
+In the shell, run this to create new posts:
+hugo new posts/first-post.md
+</code></pre>
+      </div>
+
+      
+      <div data-content-type="ai" class="post-content" style="display: none;">
         
-        <h1 id="setting-up-hugo-on-replit-a-complete-developers-guide">
+          <h1 id="setting-up-hugo-on-replit-a-complete-developers-guide">
   Setting Up Hugo on Replit: A Complete Developer&rsquo;s Guide
   <a class="heading-link" href="#setting-up-hugo-on-replit-a-complete-developers-guide">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
@@ -348,41 +376,36 @@ Why Hugo &#43; Replit is a Powerful Combination Link to heading Hugo’s Advanta
 <li>Setting up automated deployment workflows</li>
 <li>Integrating with external services (analytics, comments, etc.)</li>
 </ul>
-<p>This setup provides a robust foundation for a modern, performant blog that leverages the best of both Hugo&rsquo;s static site generation and Replit&rsquo;s cloud development environment.
-So I read this link to help me setup Replit to use Hugo.</p>
-<p><a href="https://dev.to/ritza/build-and-host-your-company-blog-on-replit-with-nix-and-hugo-k1c"  class="external-link" target="_blank" rel="noopener">Build and host your company blog on Replit with Nix and Hugo - DEV Community</a></p>
-<pre tabindex="0"><code>Open `replit.nix` and append `pkgs.hugo`to the `deps` list
+<p>This setup provides a robust foundation for a modern, performant blog that leverages the best of both Hugo&rsquo;s static site generation and Replit&rsquo;s cloud development environment.</p>
 
-In the shell, run:
-hugo new site --force .
-cd themes &amp;&amp; git clone https://github.com/panr/hugo-coder &amp;&amp; cd ..
-
-Add the following line to the bottom of `config.toml`:
-theme = &#39;hugo-coder&#39;
-
-Add:
-run = &#34;hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseURL https://YOUR-REPL-NAME-HERE.YOUR-USERNAME-HERE.repl.co&#34;
-
-In the shell, run this to create new posts:
-hugo new posts/first-post.md
-</code></pre>
+        
       </div>
-
-
-      <footer>
-        
-
-
-        
-        
-        
-        
-        
-        
-        
-      </footer>
     </article>
 
+    
+
+
+    
+    
+    
+    
+    
+      <div class="related-posts">
+        <h4>Related Posts</h4>
+        <ul>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/about/">About</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/contact/">Contact</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/projects/">Projects</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/">Automating Your Workflow: From GitHub Commits to Netlify Deployments</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/posts/robots_txt/">Robots.txt</a></li>
+          
+        </ul>
+      </div>
     
   </section>
 

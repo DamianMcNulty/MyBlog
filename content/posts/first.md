@@ -1,16 +1,8 @@
 +++ 
-draft = false
-date = 2025-08-05T12:08:14Z
 title = "Setup Replit for my new blog"
-description = ""
-slug = ""
-authors = []
-tags = []
-categories = []
-externalLink = ""
-series = []
-ai_content = """
-# Setting Up Hugo on Replit: A Complete Developer's Guide
+date = "2025-08-09"
+slug = "first"
+ai_content = """ # Setting Up Hugo on Replit: A Complete Developer's Guide
 
 Creating a blog on Replit using Hugo is an excellent choice for developers who want a fast, modern static site generator combined with the convenience of cloud-based development. This comprehensive guide will walk you through the entire setup process and provide insights into optimizing your Hugo blog for Replit's environment.
 
@@ -133,7 +125,6 @@ Once your basic setup is complete, consider:
 This setup provides a robust foundation for a modern, performant blog that leverages the best of both Hugo's static site generation and Replit's cloud development environment.
 """
 +++
-
 So I read this link to help me setup Replit to use Hugo.
 
 [Build and host your company blog on Replit with Nix and Hugo - DEV Community](https://dev.to/ritza/build-and-host-your-company-blog-on-replit-with-nix-and-hugo-k1c)
@@ -153,4 +144,4 @@ run = "hugo server --buildDrafts --buildFuture --bind 0.0.0.0 --port 443 --baseU
 
 In the shell, run this to create new posts:
 hugo new posts/first-post.md
-```
+``` 

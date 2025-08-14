@@ -168,19 +168,22 @@ User-agent: * Disallow: /">
                 August 6, 2025
               </time>
             </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              One-minute read
-            </span>
           </div>
-          
           
           
         </div>
       </header>
 
-      <div class="post-content">
-        
+      
+      <div class="content-mode-indicator" style="text-align: center; margin: 1rem 0; padding: 0.5rem; background-color: rgba(66, 165, 245, 0.1); border-radius: 4px;">
+        <span class="content-mode-label">✏️ Original Content</span>
+        <p style="font-size: 0.9em; margin: 0.5rem 0 0 0; opacity: 0.8;">
+          💡 Toggle dark mode to switch between AI-generated and original content
+        </p>
+      </div>
+
+      
+      <div data-content-type="original" class="post-content">
         <p>Added enableRobotsTXT = true to the config.toml file</p>
 <p>And:
 [params.robots]
@@ -191,21 +194,331 @@ Disallow: /</p>
 
       </div>
 
+      
+      <div data-content-type="ai" class="post-content" style="display: none;">
+        
+          <h1 id="complete-guide-to-robotstxt-for-hugo-static-sites">
+  Complete Guide to Robots.txt for Hugo Static Sites
+  <a class="heading-link" href="#complete-guide-to-robotstxt-for-hugo-static-sites">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>The robots.txt file is a fundamental component of any website&rsquo;s SEO strategy and serves as the first line of communication between your site and search engine crawlers. For Hugo-powered blogs and static sites, implementing proper robots.txt configuration is essential for controlling search engine indexing and maintaining optimal site visibility.</p>
+<h2 id="understanding-robotstxt-protocol">
+  Understanding Robots.txt Protocol
+  <a class="heading-link" href="#understanding-robotstxt-protocol">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>The robots.txt file is part of the Robots Exclusion Protocol, a standard used by websites to communicate with web crawlers and other automated agents. This simple text file, placed in your website&rsquo;s root directory, provides instructions about which parts of your site should or should not be crawled.</p>
+<p><strong>Key Functions:</strong></p>
+<ul>
+<li>Controls search engine crawler access</li>
+<li>Prevents indexing of sensitive or duplicate content</li>
+<li>Manages crawl budget for large sites</li>
+<li>Provides sitemap location references</li>
+<li>Implements temporary content restrictions</li>
+</ul>
+<h2 id="hugos-built-in-robotstxt-support">
+  Hugo&rsquo;s Built-in Robots.txt Support
+  <a class="heading-link" href="#hugos-built-in-robotstxt-support">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Hugo provides excellent built-in support for robots.txt generation through its configuration system. The <code>enableRobotsTXT = true</code> setting in your config.toml automatically generates a robots.txt file based on your site&rsquo;s configuration and content structure.</p>
+<h3 id="basic-configuration-options">
+  Basic Configuration Options
+  <a class="heading-link" href="#basic-configuration-options">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Global Robots Settings:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">enableRobotsTXT</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">robots</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">noindex</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nofollow</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">noarchive</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl"><span class="nx">nosnippet</span> <span class="p">=</span> <span class="kc">false</span>
+</span></span></code></pre></div><p><strong>Per-Page Front Matter Control:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">robots</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;noindex, nofollow&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c"># Or for specific directives</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">_build</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">list</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">publishResources</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+</span></span></span></code></pre></div><h2 id="advanced-robotstxt-implementation">
+  Advanced Robots.txt Implementation
+  <a class="heading-link" href="#advanced-robotstxt-implementation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="custom-robotstxt-content">
+  Custom Robots.txt Content
+  <a class="heading-link" href="#custom-robotstxt-content">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For more complex requirements, you can create a custom robots.txt file in your static directory:</p>
+<pre tabindex="0"><code>User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Allow: /public/
 
-      <footer>
-        
+User-agent: Googlebot
+Crawl-delay: 1
 
+User-agent: Bingbot
+Crawl-delay: 2
+
+# Block specific crawlers
+User-agent: BadBot
+Disallow: /
+
+# Sitemap location
+Sitemap: https://yourdomain.com/sitemap.xml
+Sitemap: https://yourdomain.com/en/sitemap.xml
+</code></pre><h3 id="dynamic-content-blocking">
+  Dynamic Content Blocking
+  <a class="heading-link" href="#dynamic-content-blocking">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Development Environment Protection:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">robots</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">noindex</span> <span class="p">=</span> <span class="kc">true</span>  <span class="c"># Prevents accidental indexing during development</span>
+</span></span></code></pre></div><p><strong>Staging Site Configuration:</strong></p>
+<pre tabindex="0"><code>User-agent: *
+Disallow: /
+# Completely block staging environments
+</code></pre><p><strong>Production Selective Blocking:</strong></p>
+<pre tabindex="0"><code>User-agent: *
+Disallow: /search/
+Disallow: /drafts/
+Disallow: /*?
+Allow: /
+
+Sitemap: https://yourdomain.com/sitemap.xml
+</code></pre><h2 id="seo-strategy-with-robotstxt">
+  SEO Strategy with Robots.txt
+  <a class="heading-link" href="#seo-strategy-with-robotstxt">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="content-organization-best-practices">
+  Content Organization Best Practices
+  <a class="heading-link" href="#content-organization-best-practices">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Blocking Low-Value Pages:</strong></p>
+<ul>
+<li>Tag and category pages with few posts</li>
+<li>Pagination pages beyond reasonable limits</li>
+<li>Search result pages and filtered views</li>
+<li>Administrative and utility pages</li>
+</ul>
+<p><strong>Protecting Valuable Content:</strong></p>
+<ul>
+<li>Premium or gated content areas</li>
+<li>Work-in-progress drafts</li>
+<li>Internal documentation</li>
+<li>API endpoints and feeds</li>
+</ul>
+<h3 id="crawl-budget-optimization">
+  Crawl Budget Optimization
+  <a class="heading-link" href="#crawl-budget-optimization">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For larger Hugo sites, managing crawl budget becomes crucial:</p>
+<pre tabindex="0"><code>User-agent: *
+Disallow: /tags/
+Disallow: /categories/
+Disallow: /archives/
+Disallow: /page/
+Allow: /posts/
+Allow: /about/
+Allow: /contact/
+
+Crawl-delay: 1
+</code></pre><h2 id="technical-implementation-details">
+  Technical Implementation Details
+  <a class="heading-link" href="#technical-implementation-details">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="hugos-automatic-generation">
+  Hugo&rsquo;s Automatic Generation
+  <a class="heading-link" href="#hugos-automatic-generation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>When <code>enableRobotsTXT = true</code> is set, Hugo automatically:</p>
+<ul>
+<li>Generates robots.txt at build time</li>
+<li>Respects front matter robot directives</li>
+<li>Includes sitemap references</li>
+<li>Handles multilingual configurations</li>
+</ul>
+<h3 id="custom-template-override">
+  Custom Template Override
+  <a class="heading-link" href="#custom-template-override">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Create <code>layouts/robots.txt</code> for complete control:</p>
+<pre tabindex="0"><code>User-agent: *
+{{ range .Pages }}
+{{- if eq .Kind &#34;page&#34; -}}
+{{- if .Params.private -}}
+Disallow: {{ .RelPermalink }}
+{{- end -}}
+{{- end -}}
+{{ end }}
+
+Sitemap: {{ .Site.BaseURL }}/sitemap.xml
+</code></pre><h2 id="security-and-privacy-considerations">
+  Security and Privacy Considerations
+  <a class="heading-link" href="#security-and-privacy-considerations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="information-disclosure-risks">
+  Information Disclosure Risks
+  <a class="heading-link" href="#information-disclosure-risks">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Be cautious about revealing sensitive directory structures:</p>
+<pre tabindex="0"><code># Avoid overly specific disallows that reveal internal structure
+User-agent: *
+Disallow: /admin/
+Disallow: /config/
+Disallow: /backup/
+</code></pre><h3 id="privacy-protection">
+  Privacy Protection
+  <a class="heading-link" href="#privacy-protection">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For blogs with personal content:</p>
+<pre tabindex="0"><code>User-agent: *
+Disallow: /private/
+Disallow: /family/
+Disallow: /drafts/
+Allow: /blog/
+Allow: /public/
+</code></pre><h2 id="testing-and-validation">
+  Testing and Validation
+  <a class="heading-link" href="#testing-and-validation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="google-search-console-integration">
+  Google Search Console Integration
+  <a class="heading-link" href="#google-search-console-integration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<ul>
+<li>Submit robots.txt through Search Console</li>
+<li>Monitor crawl error reports</li>
+<li>Validate syntax using GSC robots.txt tester</li>
+<li>Track indexing status changes</li>
+</ul>
+<h3 id="common-validation-tools">
+  Common Validation Tools
+  <a class="heading-link" href="#common-validation-tools">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Syntax Checking:</strong></p>
+<ul>
+<li>Google Search Console robots.txt tester</li>
+<li>Bing Webmaster Tools validator</li>
+<li>Third-party robots.txt validators</li>
+</ul>
+<p><strong>Testing Commands:</strong></p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Test robots.txt accessibility</span>
+</span></span><span class="line"><span class="cl">curl https://yourdomain.com/robots.txt
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Validate with Google&#39;s tool</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Use Search Console&#39;s robots.txt tester</span>
+</span></span></code></pre></div><h2 id="troubleshooting-common-issues">
+  Troubleshooting Common Issues
+  <a class="heading-link" href="#troubleshooting-common-issues">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>Robots.txt Not Found (404):</strong></p>
+<ul>
+<li>Verify <code>enableRobotsTXT = true</code> in config</li>
+<li>Check Hugo build process completion</li>
+<li>Ensure proper deployment configuration</li>
+</ul>
+<p><strong>Incorrect Crawling Behavior:</strong></p>
+<ul>
+<li>Allow 24-48 hours for changes to take effect</li>
+<li>Check for cached versions in CDN</li>
+<li>Validate syntax for typos or formatting errors</li>
+</ul>
+<p><strong>Over-blocking Content:</strong></p>
+<ul>
+<li>Review Disallow rules for unintended scope</li>
+<li>Test with specific user agents</li>
+<li>Monitor search performance metrics</li>
+</ul>
+<p>This comprehensive robots.txt implementation ensures optimal search engine interaction while protecting sensitive content and managing your site&rsquo;s crawl budget effectively.</p>
 
         
-        
-        
-        
-        
-        
-        
-      </footer>
+      </div>
     </article>
 
+    
+
+
+    
+    
+    
+    
+    
+      <div class="related-posts">
+        <h4>Related Posts</h4>
+        <ul>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/posts/google_analytics/">Google Analytics</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/posts/example-dual-content/">Example: Dual Content Post</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/autores/autores-de-hugo/">Autores de Hugo</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/categoria/temas/">temas</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/categoria/sintaxe/">sintaxe</a></li>
+          
+        </ul>
+      </div>
     
   </section>
 

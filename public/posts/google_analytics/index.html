@@ -162,40 +162,351 @@
                 August 6, 2025
               </time>
             </span>
-            <span class="reading-time">
-              <i class="fa-solid fa-clock" aria-hidden="true"></i>
-              One-minute read
-            </span>
           </div>
-          
           
           
         </div>
       </header>
 
-      <div class="post-content">
-        
+      
+      <div class="content-mode-indicator" style="text-align: center; margin: 1rem 0; padding: 0.5rem; background-color: rgba(66, 165, 245, 0.1); border-radius: 4px;">
+        <span class="content-mode-label">✏️ Original Content</span>
+        <p style="font-size: 0.9em; margin: 0.5rem 0 0 0; opacity: 0.8;">
+          💡 Toggle dark mode to switch between AI-generated and original content
+        </p>
+      </div>
+
+      
+      <div data-content-type="original" class="post-content">
         <p>Added the following to config.toml to setup Google Analytics:</p>
 <p>[params.googleTagManager]
 id = &ldquo;id&hellip;&rdquo;</p>
 
       </div>
 
+      
+      <div data-content-type="ai" class="post-content" style="display: none;">
+        
+          <h1 id="comprehensive-guide-to-google-analytics-integration-with-hugo">
+  Comprehensive Guide to Google Analytics Integration with Hugo
+  <a class="heading-link" href="#comprehensive-guide-to-google-analytics-integration-with-hugo">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h1>
+<p>Implementing Google Analytics on your Hugo-powered blog represents a critical step in understanding your audience, measuring content performance, and optimizing your digital presence. This guide covers everything from basic setup to advanced analytics strategies.</p>
+<h2 id="understanding-google-analytics-4-ga4">
+  Understanding Google Analytics 4 (GA4)
+  <a class="heading-link" href="#understanding-google-analytics-4-ga4">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p>Google Analytics 4 is the latest iteration of Google&rsquo;s analytics platform, featuring enhanced privacy controls, cross-platform tracking, and machine learning-powered insights. Unlike Universal Analytics, GA4 focuses on events rather than sessions, providing more granular data about user interactions.</p>
+<p><strong>Key GA4 Features:</strong></p>
+<ul>
+<li>Enhanced measurement capabilities with automatic event tracking</li>
+<li>Cross-device and cross-platform user journey analysis</li>
+<li>Privacy-focused data collection with consent management</li>
+<li>Advanced audience segmentation and predictive analytics</li>
+<li>Integration with Google Ads and other marketing platforms</li>
+</ul>
+<h2 id="hugo-configuration-methods">
+  Hugo Configuration Methods
+  <a class="heading-link" href="#hugo-configuration-methods">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="method-1-google-tag-manager-integration-recommended">
+  Method 1: Google Tag Manager Integration (Recommended)
+  <a class="heading-link" href="#method-1-google-tag-manager-integration-recommended">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The most flexible approach uses Google Tag Manager (GTM), which provides a centralized platform for managing all your tracking codes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">googleTagManager</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">id</span> <span class="p">=</span> <span class="s2">&#34;G-XXXXXXXXXX&#34;</span>
+</span></span></code></pre></div><p><strong>Advantages of GTM Approach:</strong></p>
+<ul>
+<li>Centralized tag management without code changes</li>
+<li>Enhanced debugging capabilities</li>
+<li>Support for multiple tracking platforms</li>
+<li>Advanced trigger and variable configurations</li>
+<li>Real-time preview and testing features</li>
+</ul>
+<h3 id="method-2-direct-google-analytics-integration">
+  Method 2: Direct Google Analytics Integration
+  <a class="heading-link" href="#method-2-direct-google-analytics-integration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For simpler setups, direct integration is also supported:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">googleAnalytics</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">id</span> <span class="p">=</span> <span class="s2">&#34;G-XXXXXXXXXX&#34;</span>
+</span></span></code></pre></div><h2 id="advanced-configuration-options">
+  Advanced Configuration Options
+  <a class="heading-link" href="#advanced-configuration-options">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="custom-events-and-conversions">
+  Custom Events and Conversions
+  <a class="heading-link" href="#custom-events-and-conversions">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Implement custom event tracking to measure specific user actions:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Track content engagement
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">,</span> <span class="s1">&#39;engagement&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;content_type&#39;</span><span class="o">:</span> <span class="s1">&#39;blog_post&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;content_id&#39;</span><span class="o">:</span> <span class="s1">&#39;post-slug&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;engagement_time_msec&#39;</span><span class="o">:</span> <span class="mi">30000</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Track newsletter signups
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">,</span> <span class="s1">&#39;conversion&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;send_to&#39;</span><span class="o">:</span> <span class="s1">&#39;G-XXXXXXXXXX/newsletter_signup&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h3 id="enhanced-ecommerce-tracking">
+  Enhanced Ecommerce Tracking
+  <a class="heading-link" href="#enhanced-ecommerce-tracking">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>For blogs with monetization features:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">,</span> <span class="s1">&#39;purchase&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;transaction_id&#39;</span><span class="o">:</span> <span class="s1">&#39;transaction_123&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;value&#39;</span><span class="o">:</span> <span class="mf">29.99</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;currency&#39;</span><span class="o">:</span> <span class="s1">&#39;USD&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;items&#39;</span><span class="o">:</span> <span class="p">[{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;item_id&#39;</span><span class="o">:</span> <span class="s1">&#39;premium_content&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;item_name&#39;</span><span class="o">:</span> <span class="s1">&#39;Premium Blog Access&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;category&#39;</span><span class="o">:</span> <span class="s1">&#39;Subscription&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;quantity&#39;</span><span class="o">:</span> <span class="mi">1</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;price&#39;</span><span class="o">:</span> <span class="mf">29.99</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}]</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h2 id="performance-optimization-strategies">
+  Performance Optimization Strategies
+  <a class="heading-link" href="#performance-optimization-strategies">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="lazy-loading-implementation">
+  Lazy Loading Implementation
+  <a class="heading-link" href="#lazy-loading-implementation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Optimize page load speeds by implementing conditional analytics loading:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Load analytics only after user interaction
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;scroll&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nb">window</span><span class="p">.</span><span class="nx">analyticsLoaded</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">loadGoogleAnalytics</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">window</span><span class="p">.</span><span class="nx">analyticsLoaded</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">},</span> <span class="p">{</span> <span class="nx">once</span><span class="o">:</span> <span class="kc">true</span> <span class="p">});</span>
+</span></span></code></pre></div><h3 id="content-security-policy-configuration">
+  Content Security Policy Configuration
+  <a class="heading-link" href="#content-security-policy-configuration">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Ensure analytics work with strict CSP headers:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">csp</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">scriptsrc</span> <span class="p">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;&#39;self&#39;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;https://www.googletagmanager.com&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;https://www.google-analytics.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="nx">connectsrc</span> <span class="p">=</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;&#39;self&#39;&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;https://www.google-analytics.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span></code></pre></div><h2 id="privacy-and-compliance">
+  Privacy and Compliance
+  <a class="heading-link" href="#privacy-and-compliance">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="gdpr-compliance-implementation">
+  GDPR Compliance Implementation
+  <a class="heading-link" href="#gdpr-compliance-implementation">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Configure consent management for European users:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Implement consent management
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;consent&#39;</span><span class="p">,</span> <span class="s1">&#39;default&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;analytics_storage&#39;</span><span class="o">:</span> <span class="s1">&#39;denied&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;ad_storage&#39;</span><span class="o">:</span> <span class="s1">&#39;denied&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Update consent based on user choice
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">function</span> <span class="nx">updateConsent</span><span class="p">(</span><span class="nx">consentGranted</span><span class="p">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;consent&#39;</span><span class="p">,</span> <span class="s1">&#39;update&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;analytics_storage&#39;</span><span class="o">:</span> <span class="nx">consentGranted</span> <span class="o">?</span> <span class="s1">&#39;granted&#39;</span> <span class="o">:</span> <span class="s1">&#39;denied&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><h3 id="cookie-free-tracking-options">
+  Cookie-Free Tracking Options
+  <a class="heading-link" href="#cookie-free-tracking-options">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Implement privacy-focused analytics with reduced cookie usage:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;config&#39;</span><span class="p">,</span> <span class="s1">&#39;G-XXXXXXXXXX&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;anonymize_ip&#39;</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cookie_flags&#39;</span><span class="o">:</span> <span class="s1">&#39;secure;samesite=strict&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;cookie_expires&#39;</span><span class="o">:</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">60</span> <span class="o">*</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">30</span> <span class="c1">// 30 days
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">});</span>
+</span></span></code></pre></div><h2 id="key-metrics-for-blog-analytics">
+  Key Metrics for Blog Analytics
+  <a class="heading-link" href="#key-metrics-for-blog-analytics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="content-performance-metrics">
+  Content Performance Metrics
+  <a class="heading-link" href="#content-performance-metrics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p><strong>Engagement Metrics:</strong></p>
+<ul>
+<li>Page views and unique page views</li>
+<li>Average session duration and bounce rate</li>
+<li>Scroll depth and time on page</li>
+<li>Social shares and external link clicks</li>
+</ul>
+<p><strong>Audience Insights:</strong></p>
+<ul>
+<li>Geographic distribution and device breakdown</li>
+<li>Traffic sources and referral analysis</li>
+<li>User demographics and interests</li>
+<li>Return visitor patterns</li>
+</ul>
+<p><strong>Conversion Tracking:</strong></p>
+<ul>
+<li>Newsletter subscription rates</li>
+<li>Contact form submissions</li>
+<li>Content downloads and sign-ups</li>
+<li>Goal completion and funnel analysis</li>
+</ul>
+<h2 id="advanced-reporting-and-analysis">
+  Advanced Reporting and Analysis
+  <a class="heading-link" href="#advanced-reporting-and-analysis">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<h3 id="custom-dimensions-and-metrics">
+  Custom Dimensions and Metrics
+  <a class="heading-link" href="#custom-dimensions-and-metrics">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Set up custom tracking for blog-specific data:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="c1">// Track content categories
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;config&#39;</span><span class="p">,</span> <span class="s1">&#39;G-XXXXXXXXXX&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;custom_map&#39;</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;custom_parameter_1&#39;</span><span class="o">:</span> <span class="s1">&#39;content_category&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;custom_parameter_2&#39;</span><span class="o">:</span> <span class="s1">&#39;author_name&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">// Send custom data with page views
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">gtag</span><span class="p">(</span><span class="s1">&#39;event&#39;</span><span class="p">,</span> <span class="s1">&#39;page_view&#39;</span><span class="p">,</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;custom_parameter_1&#39;</span><span class="o">:</span> <span class="s1">&#39;Tech Tutorial&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="s1">&#39;custom_parameter_2&#39;</span><span class="o">:</span> <span class="s1">&#39;John Doe&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></div><h3 id="automated-reporting-setup">
+  Automated Reporting Setup
+  <a class="heading-link" href="#automated-reporting-setup">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>Configure automated insights and reports:</p>
+<ul>
+<li>Weekly performance summaries</li>
+<li>Monthly audience growth reports</li>
+<li>Content performance dashboards</li>
+<li>Real-time alert configurations</li>
+</ul>
+<h2 id="troubleshooting-common-issues">
+  Troubleshooting Common Issues
+  <a class="heading-link" href="#troubleshooting-common-issues">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h2>
+<p><strong>Analytics Not Tracking:</strong></p>
+<ul>
+<li>Verify measurement ID format (G-XXXXXXXXXX)</li>
+<li>Check for ad blockers and privacy extensions</li>
+<li>Validate tag implementation with GA Debugger</li>
+<li>Ensure proper consent management</li>
+</ul>
+<p><strong>Data Discrepancies:</strong></p>
+<ul>
+<li>Compare with other analytics platforms</li>
+<li>Account for bot traffic and internal users</li>
+<li>Verify timezone and currency settings</li>
+<li>Check filter configurations</li>
+</ul>
+<p><strong>Performance Impact:</strong></p>
+<ul>
+<li>Monitor page load speed metrics</li>
+<li>Implement asynchronous loading</li>
+<li>Use performance budgets for tracking code</li>
+<li>Consider server-side tracking alternatives</li>
+</ul>
+<p>This comprehensive analytics setup provides deep insights into your blog&rsquo;s performance while maintaining user privacy and site performance standards.</p>
 
-      <footer>
         
-
-
-        
-        
-        
-        
-        
-        
-        
-      </footer>
+      </div>
     </article>
 
+    
+
+
+    
+    
+    
+    
+    
+      <div class="related-posts">
+        <h4>Related Posts</h4>
+        <ul>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/posts/example-dual-content/">Example: Dual Content Post</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/autores/autores-de-hugo/">Autores de Hugo</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/categoria/temas/">temas</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/categoria/sintaxe/">sintaxe</a></li>
+          
+            <li><a href="https://MyBlog.damianmcnulty2.repl.co:443/tags/shortcodes/_index.pt-br/">Códigos curtos</a></li>
+          
+        </ul>
+      </div>
     
   </section>
 

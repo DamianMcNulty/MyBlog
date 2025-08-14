@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Damian McNulty</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 Aug 2025 01:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 09 Aug 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setup Replit for my new blog</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/first/</link>
+      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/first/</guid>
+      <description>So I read this link to help me setup Replit to use Hugo.&#xA;Build and host your company blog on Replit with Nix and Hugo - DEV Community&#xA;Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;amp;&amp;amp; git clone https://github.com/panr/hugo-coder &amp;amp;&amp;amp; cd .. Add the following line to the bottom of `config.toml`: theme = &amp;#39;hugo-coder&amp;#39; Add: run = &amp;#34;hugo server --buildDrafts --buildFuture --bind 0.</description>
+    </item>
     <item>
       <title>Automating Your Workflow: From GitHub Commits to Netlify Deployments</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</link>
@@ -28,13 +35,6 @@
       <pubDate>Wed, 06 Aug 2025 23:38:55 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/google_analytics/</guid>
       <description>Added the following to config.toml to setup Google Analytics:&#xA;[params.googleTagManager] id = &amp;ldquo;id&amp;hellip;&amp;rdquo;</description>
-    </item>
-    <item>
-      <title>Setup Replit for my new blog</title>
-      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</link>
-      <pubDate>Tue, 05 Aug 2025 12:08:14 +0000</pubDate>
-      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/first-post/</guid>
-      <description>So I read this link to help me setup Replit to use Hugo.&#xA;Build and host your company blog on Replit with Nix and Hugo - DEV Community&#xA;Open `replit.nix` and append `pkgs.hugo`to the `deps` list In the shell, run: hugo new site --force . cd themes &amp;amp;&amp;amp; git clone https://github.com/panr/hugo-coder &amp;amp;&amp;amp; cd .. Add the following line to the bottom of `config.toml`: theme = &amp;#39;hugo-coder&amp;#39; Add: run = &amp;#34;hugo server --buildDrafts --buildFuture --bind 0.</description>
     </item>
     <item>
       <title>Example: Dual Content Post</title>
