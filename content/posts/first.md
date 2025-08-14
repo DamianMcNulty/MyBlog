@@ -1,6 +1,6 @@
 +++ 
 title = "Setup Replit for my new blog"
-date = "2025-08-09"
+date = "2025-08-05"
 slug = "first"
 ai_content = """ # Setting Up Hugo on Replit: A Complete Developer's Guide
 
