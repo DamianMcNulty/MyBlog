@@ -15,6 +15,9 @@ Creating a blog on Replit using Hugo is an excellent choice for developers who w
 - Markdown-based content management
 - Built-in SEO optimization features
 
+{{< youtube 0RKpf3rK57I >}}
+
+
 **Replit's Benefits:**
 - Zero local setup required - develop from any device
 - Automatic dependency management through Nix
