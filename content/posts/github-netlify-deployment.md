@@ -1,8 +1,8 @@
 
 +++
-draft = true
-date = 2025-08-08T01:30:00Z
-title = "Automating Your Workflow: From GitHub Commits to Netlify Deployments"
+draft = false
+date = 2025-08-15T01:30:00Z
+title = "From GitHub Commits to Netlify Deployments"
 description = "Learn how to set up automatic deployments from GitHub to Netlify for seamless continuous integration"
 slug = "github-netlify-deployment"
 authors = ["Damian McNulty"]
@@ -10,8 +10,7 @@ tags = ["GitHub", "Netlify", "Deployment", "CI/CD", "Automation"]
 categories = ["DevOps", "Web Development"]
 externalLink = ""
 series = []
-+++
-
+ai_content = """
 ## Introduction
 
 In today's fast-paced development environment, automating your deployment pipeline is essential for maintaining productivity and reducing manual errors. This guide will walk you through setting up an automated workflow that commits your code to GitHub and automatically deploys it to Netlify.
@@ -423,5 +422,9 @@ The time invested in setting up this automation pays dividends in increased prod
 Remember to regularly review and update your deployment configuration as your project evolves. Happy coding and deploying!
 
 ---
+"""
++++
 
-*Have questions about setting up your deployment pipeline? Feel free to reach out or check the official documentation for [GitHub](https://docs.github.com) and [Netlify](https://docs.netlify.com).*
+
+
+*Check the official documentation for [GitHub](https://docs.github.com) and [Netlify](https://docs.netlify.com).*

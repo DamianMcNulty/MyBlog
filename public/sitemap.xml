@@ -2,17 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/</loc>
-    <lastmod>2025-08-14T21:58:10+00:00</lastmod>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/automation/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/your-post-title/</loc>
-    <lastmod>2025-08-14T21:58:10+00:00</lastmod>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/ci/cd/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/authors/damian-mcnulty/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/deployment/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/categories/devops/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/github/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/netlify/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/</loc>
-    <lastmod>2025-08-14T21:58:10+00:00</lastmod>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
   </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/second-post/</loc>
-    <lastmod>2025-08-14T00:07:27+00:00</lastmod>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/categories/web-development/</loc>
+    <lastmod>2025-08-15T01:30:00+00:00</lastmod>
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/about/</loc>
     <lastmod>2025-08-09T00:00:00+00:00</lastmod>
@@ -23,41 +44,14 @@
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/projects/</loc>
     <lastmod>2025-08-09T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/first/</loc>
-    <lastmod>2025-08-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/automation/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/ci/cd/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/authors/damian-mcnulty/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/deployment/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/categories/devops/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/github/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/netlify/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
-    <loc>https://MyBlog.damianmcnulty2.repl.co:443/categories/web-development/</loc>
-    <lastmod>2025-08-08T01:30:00+00:00</lastmod>
-  </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/robots_txt/</loc>
     <lastmod>2025-08-06T23:56:47+00:00</lastmod>
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/google_analytics/</loc>
     <lastmod>2025-08-06T23:38:55+00:00</lastmod>
+  </url><url>
+    <loc>https://MyBlog.damianmcnulty2.repl.co:443/posts/first/</loc>
+    <lastmod>2025-08-05T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://MyBlog.damianmcnulty2.repl.co:443/tags/ai/</loc>
     <lastmod>2024-01-15T10:00:00+00:00</lastmod>

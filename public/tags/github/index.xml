@@ -6,14 +6,14 @@
     <description>Recent content in GitHub on Damian McNulty</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 08 Aug 2025 01:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 15 Aug 2025 01:30:00 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Automating Your Workflow: From GitHub Commits to Netlify Deployments</title>
+      <title>From GitHub Commits to Netlify Deployments</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</link>
-      <pubDate>Fri, 08 Aug 2025 01:30:00 +0000</pubDate>
+      <pubDate>Fri, 15 Aug 2025 01:30:00 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</guid>
-      <description>Introduction Link to heading In today&amp;rsquo;s fast-paced development environment, automating your deployment pipeline is essential for maintaining productivity and reducing manual errors. This guide will walk you through setting up an automated workflow that commits your code to GitHub and automatically deploys it to Netlify.&#xA;Why Automate Your Deployment? Link to heading Before diving into the technical details, let&amp;rsquo;s understand why automation matters:&#xA;Consistency: Every deployment follows the same process Speed: Instant deployments on code changes Reliability: Reduced human error in deployment process Scalability: Handle multiple projects efficiently Rollback capability: Easy to revert problematic deployments Prerequisites Link to heading Before we begin, ensure you have:</description>
+      <description>Check the official documentation for GitHub and Netlify.</description>
     </item>
   </channel>
 </rss>
