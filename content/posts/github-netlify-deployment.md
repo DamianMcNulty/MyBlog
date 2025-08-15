@@ -2,7 +2,7 @@
 +++
 draft = false
 date = 2025-08-15T01:30:00Z
-title = "From GitHub Commits to Netlify Deployments"
+title = "GitHub to Netlify"
 description = "Learn how to set up automatic deployments from GitHub to Netlify for seamless continuous integration"
 slug = "github-netlify-deployment"
 authors = ["Damian McNulty"]
