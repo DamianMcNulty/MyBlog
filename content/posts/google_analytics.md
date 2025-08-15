@@ -233,7 +233,7 @@ This comprehensive analytics setup provides deep insights into your blog's perfo
 """
 +++
 
-Added the following to config.toml to setup Google Analytics:
+Added the following to config.toml to set up Google Analytics:
 
  [params.googleTagManager]
  id = "id..."
