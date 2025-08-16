@@ -9,7 +9,7 @@
     <lastBuildDate>Fri, 15 Aug 2025 01:30:00 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>From GitHub Commits to Netlify Deployments</title>
+      <title>GitHub to Netlify</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</link>
       <pubDate>Fri, 15 Aug 2025 01:30:00 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</guid>

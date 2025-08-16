@@ -6,10 +6,17 @@
     <description>Recent content on Damian McNulty</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 15 Aug 2025 01:30:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 16 Aug 2025 13:19:56 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>From GitHub Commits to Netlify Deployments</title>
+      <title>Modifying Hugo themes</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/modifying-hugo-themes/</link>
+      <pubDate>Sat, 16 Aug 2025 13:19:56 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/modifying-hugo-themes/</guid>
+      <description>Just an starting point for Hugo theme modification.</description>
+    </item>
+    <item>
+      <title>GitHub to Netlify</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</link>
       <pubDate>Fri, 15 Aug 2025 01:30:00 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/github-netlify-deployment/</guid>
