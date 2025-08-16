@@ -25,7 +25,7 @@ Creating a blog on Replit using Hugo is an excellent choice for developers who w
 - Built-in version control integration
 - One-click deployment options
 
-{{< youtube St95POwsa8 >}}
+{{< youtube St95nPOwsa8 >}}
 
 ## Step-by-Step Setup Process
 
