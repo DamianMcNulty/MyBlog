@@ -79,4 +79,4 @@ Customizing Hugo themes need not be daunting. By leveraging Hugo’s override sy
 [10] https://mayadevbe.me/posts/blog/hugothemecreation/
 """
 +++
-Just an starting point for Hugo theme modification.
+Just a starting point for Hugo theme modification.
