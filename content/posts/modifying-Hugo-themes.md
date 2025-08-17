@@ -68,14 +68,23 @@ Conclusion
 Customizing Hugo themes need not be daunting. By leveraging Hugo’s override system and understanding its modular file structure, you can inject your brand, improve user experience, and add unique features—all while keeping your site fast and maintainable. With each refinement, your Hugo site becomes a powerful reflection of your vision and technical creativity.
 
 [1] https://bootstrap.hugoblox.com/getting-started/get-started/
+
 [2] https://bit-101.com/blog/posts/2023-12-30/hugo-themes-part-1/
+
 [3] https://www.youtube.com/watch?v=w6_cQsTwd3Q
+
 [4] https://gohugobrasil.netlify.app/themes/customizing/
+
 [5] https://co2.mindiply.com/blog/customizing-your-hugo-theme/
+
 [6] https://draft.dev/learn/creating-hugo-themes
+
 [7] https://bootstrap.hugoblox.com/getting-started/customization/
+
 [8] https://gohugo.io/getting-started/quick-start/
+
 [9] https://dev.to/vinliao/create-your-own-hugo-theme-from-scratch-5df9
+
 [10] https://mayadevbe.me/posts/blog/hugothemecreation/
 """
 +++
