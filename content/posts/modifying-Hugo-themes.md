@@ -73,6 +73,8 @@ Customizing Hugo themes need not be daunting. By leveraging Hugo’s override sy
 
 [3] https://www.youtube.com/watch?v=w6_cQsTwd3Q
 
+{{< youtube w6_cQsTwd3Q >}}
+
 [4] https://gohugobrasil.netlify.app/themes/customizing/
 
 [5] https://co2.mindiply.com/blog/customizing-your-hugo-theme/
