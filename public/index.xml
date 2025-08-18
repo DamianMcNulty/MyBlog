@@ -13,7 +13,7 @@
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/modifying-hugo-themes/</link>
       <pubDate>Sat, 16 Aug 2025 13:19:56 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/modifying-hugo-themes/</guid>
-      <description>Just an starting point for Hugo theme modification.</description>
+      <description>Just a starting point for Hugo theme modification.</description>
     </item>
     <item>
       <title>GitHub to Netlify</title>
@@ -28,13 +28,6 @@
       <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
       <guid>https://MyBlog.damianmcnulty2.repl.co:443/about/</guid>
       <description>Currently, working on my new blog.</description>
-    </item>
-    <item>
-      <title>Contact</title>
-      <link>https://MyBlog.damianmcnulty2.repl.co:443/contact/</link>
-      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://MyBlog.damianmcnulty2.repl.co:443/contact/</guid>
-      <description></description>
     </item>
     <item>
       <title>Projects</title>
