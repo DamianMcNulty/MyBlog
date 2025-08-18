@@ -30,13 +30,6 @@
       <description>Currently, working on my new blog.</description>
     </item>
     <item>
-      <title>Projects</title>
-      <link>https://MyBlog.damianmcnulty2.repl.co:443/projects/</link>
-      <pubDate>Sat, 09 Aug 2025 00:00:00 +0000</pubDate>
-      <guid>https://MyBlog.damianmcnulty2.repl.co:443/projects/</guid>
-      <description>Link to github projects.</description>
-    </item>
-    <item>
       <title>Robots.txt</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/robots_txt/</link>
       <pubDate>Wed, 06 Aug 2025 23:56:47 +0000</pubDate>
