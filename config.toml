@@ -22,11 +22,11 @@ noClasses = false
 unsafe = true
 
 [params]
-author = "Damian McNulty"
+author = "Damian McNulty's"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Damian's personal website"
 keywords = "blog,personal"
-info = [""]
+info = ["Blog"]
 avatarURL = "images/avatar.jpg"
 #gravatar = "john.doe@example.com"
 dateFormat = "January 2, 2006"
