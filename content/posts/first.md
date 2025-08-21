@@ -1,5 +1,5 @@
 +++ 
-title = "Replit setup for my new blog"
+title = "Replit setup"
 date = "2025-08-05"
 slug = "first"
 ai_content = """ # Setting Up Hugo on Replit: A Complete Developer's Guide
@@ -15,8 +15,6 @@ Creating a blog on Replit using Hugo is an excellent choice for developers who w
 - Markdown-based content management
 - Built-in SEO optimization features
 
-{{< youtube 0RKpf3rK57I >}}
-
 
 **Replit's Benefits:**
 - Zero local setup required - develop from any device
@@ -25,7 +23,6 @@ Creating a blog on Replit using Hugo is an excellent choice for developers who w
 - Built-in version control integration
 - One-click deployment options
 
-{{< youtube St95nPOwsa8 >}}
 
 ## Step-by-Step Setup Process
 
@@ -133,6 +130,9 @@ This setup provides a robust foundation for a modern, performant blog that lever
 So I read this link to help me set up Replit to use Hugo.
 
 [Build and host your company blog on Replit with Nix and Hugo - DEV Community](https://dev.to/ritza/build-and-host-your-company-blog-on-replit-with-nix-and-hugo-k1c)
+
+{{< youtube 0RKpf3rK57I >}}
+
 
 ```
 Open `replit.nix` and append `pkgs.hugo`to the `deps` list
