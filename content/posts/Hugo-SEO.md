@@ -1,6 +1,6 @@
 +++ 
 draft = false
-date = 2025-08-21T05:32:10Z
+date = 2025-08-21
 title = "SEO tips"
 description = ""
 slug = ""
