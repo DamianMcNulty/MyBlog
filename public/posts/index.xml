@@ -6,8 +6,15 @@
     <description>Recent content in Posts on Damian McNulty</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 21 Aug 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 22 Aug 2025 05:40:21 +0000</lastBuildDate>
     <atom:link href="https://MyBlog.damianmcnulty2.repl.co:443/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Git</title>
+      <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/git/</link>
+      <pubDate>Fri, 22 Aug 2025 05:40:21 +0000</pubDate>
+      <guid>https://MyBlog.damianmcnulty2.repl.co:443/posts/git/</guid>
+      <description> Tip Tidy up Git commits </description>
+    </item>
     <item>
       <title>SEO tips</title>
       <link>https://MyBlog.damianmcnulty2.repl.co:443/posts/hugo-seo/</link>
