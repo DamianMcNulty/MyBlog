@@ -2,14 +2,13 @@
 draft = false
 date = 2025-08-23T10:43:09Z
 title = "AI-Augmented Design"
-description = ""
+description = "Explore how AI and human creativity intersect in a UX design sprint, accelerating workflows while emphasizing critical thinking and empathy."
 slug = ""
 authors = []
 tags = [ AI, UX Design, Design Sprint, ChatGPT, AI Augmentation]
 categories = []
 externalLink = ""
 series = []
-description = "Explore how AI and human creativity intersect in a UX design sprint, accelerating workflows while emphasizing critical thinking and empathy."
 ai_content = """
 ## A Week in the Life of an AI-Augmented Designer
 
