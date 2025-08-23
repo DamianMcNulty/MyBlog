@@ -1,7 +1,7 @@
 +++ 
 draft = false
 date = 2025-08-23T10:43:09Z
-title = "A Week in the Life of an AI-Augmented Designer: Insights from a Design Sprint"
+title = "AI-Augmented Design"
 description = ""
 slug = ""
 authors = []
