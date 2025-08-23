@@ -10,7 +10,7 @@ categories = []
 externalLink = ""
 series = []
 description = "Explore how AI and human creativity intersect in a UX design sprint, accelerating workflows while emphasizing critical thinking and empathy."
-ai-content = """
+ai_content = """
 ## A Week in the Life of an AI-Augmented Designer
 
 This article follows Kate, a mid-level UX designer at a FinTech company, as she experiments with AI tools—primarily ChatGPT—to augment her work during a five-day design sprint focused on improving financial confidence for Gen Z users.
@@ -43,7 +43,6 @@ Kate’s week ends with a validated concept and a profound shift in mindset: fro
 
 The article underscores that speed and automation are not substitutes for **human insight**. The future belongs to designers who harness AI responsibly and creatively, combining machine efficiency with uniquely human judgment and empathy.
 
----
 
 *This summary is based on Lyndon Cerejo’s article on Smashing Magazine, August 2025.*  
 
