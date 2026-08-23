@@ -73,3 +73,15 @@ body.colorscheme-dark .content-mode-indicator {
     border-color: rgba(147, 176, 255, 0.45);
   }
 }
+
+.post-content p {
+  hyphens: none;
+  -webkit-hyphens: none;
+  -ms-hyphens: none;
+  word-break: normal;
+  overflow-wrap: normal;
+}
+
+.post-content a {
+  overflow-wrap: anywhere;
+}
