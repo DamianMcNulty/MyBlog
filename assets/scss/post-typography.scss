@@ -2,5 +2,22 @@
 
 /* Use Plus Jakarta Sans for post copy while preserving the theme's heading typography. */
 .post-content {
+  max-width: 70ch;
   font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.7rem;
+  line-height: 1.75;
+}
+
+.post-content p {
+  text-align: left;
+  margin-bottom: 1.25em;
+}
+
+.post-content a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.post-content pre {
+  overflow-x: auto;
 }
