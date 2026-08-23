@@ -1,0 +1,22 @@
+/* Softer page colors for comfortable reading in both themes. */
+body {
+  background-color: #F6F4EF;
+  color: #242424;
+}
+
+body.colorscheme-dark {
+  background-color: #202124;
+  color: #E8E5DD;
+}
+
+body.colorscheme-auto {
+  background-color: #F6F4EF;
+  color: #242424;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto {
+    background-color: #202124;
+    color: #E8E5DD;
+  }
+}
