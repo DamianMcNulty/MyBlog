@@ -43,20 +43,24 @@
         </div>
       </header>
 
-      <!-- Content Mode Indicator -->
-      <div class="content-mode-indicator" style="text-align: center; margin: 1rem 0; padding: 0.5rem; background-color: rgba(66, 165, 245, 0.1); border-radius: 4px;">
-        <span class="content-mode-label">✏️ Original Content</span>
-        <p style="font-size: 0.9em; margin: 0.5rem 0 0 0; opacity: 0.8;">
-          💡 Toggle dark mode to switch between AI-generated and original content
-        </p>
+      <!-- Content Version Toggle -->
+      <div class="content-mode-indicator" aria-labelledby="content-mode-label">
+        <p id="content-mode-label" class="content-mode-label">Content version</p>
+        <div class="content-mode-toggle" role="group" aria-label="Choose content version">
+          <button type="button" data-content-toggle="original" aria-pressed="true">✏️ Original</button>
+          {{ with .Params.ai_content }}
+            <button type="button" data-content-toggle="ai" aria-pressed="false">🤖 AI-generated</button>
+          {{ end }}
+        </div>
+        <p class="content-mode-help">Choose which version of this post to read. Display mode is controlled separately.</p>
       </div>
 
-      <!-- Original Content (shown in light mode) -->
+      <!-- Original Content (shown by default) -->
       <div data-content-type="original" class="post-content">
         {{ .Content }}
       </div>
 
-      <!-- AI Generated Content (shown in dark mode) -->
+      <!-- AI-generated Content (selected with the content toggle) -->
       <div data-content-type="ai" class="post-content" style="display: none;">
         {{ if .Params.ai_content }}
           {{ .Params.ai_content | markdownify }}
