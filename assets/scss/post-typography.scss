@@ -96,3 +96,9 @@ body.colorscheme-dark .content-mode-indicator {
   word-break: normal;
   overflow-wrap: normal;
 }
+
+/* Override the theme's more-specific justified paragraph rule. */
+.content article .post-content p {
+  text-align: left !important;
+  text-justify: auto;
+}
