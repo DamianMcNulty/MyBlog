@@ -85,3 +85,14 @@ body.colorscheme-dark .content-mode-indicator {
 .post-content a {
   overflow-wrap: anywhere;
 }
+
+/* Override the theme's more-specific automatic hyphenation rule. */
+.content article .post-content p,
+.content article .post-content li,
+.content article .post-content blockquote {
+  hyphens: none !important;
+  -webkit-hyphens: none !important;
+  -ms-hyphens: none !important;
+  word-break: normal;
+  overflow-wrap: normal;
+}
