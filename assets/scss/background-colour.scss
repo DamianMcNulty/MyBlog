@@ -1,0 +1,167 @@
+/* Safe, user-selected background colours. */
+:root {
+  --custom-light-background: #F6F4EF;
+  --custom-dark-background: #202124;
+  --custom-background-selection: #F6F4EF;
+}
+
+body {
+  background-color: var(--custom-light-background);
+}
+
+body.colorscheme-dark {
+  background-color: var(--custom-dark-background);
+}
+
+body.colorscheme-auto {
+  background-color: var(--custom-light-background);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto {
+    background-color: var(--custom-dark-background);
+  }
+}
+
+.background-colour-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  margin-top: 0.6rem;
+  padding: 0.45rem;
+  border: 0;
+  border-radius: 0.2rem;
+  color: inherit;
+  background: var(--alt-bg-color, #E8E8E8);
+  opacity: 0.5;
+  cursor: pointer;
+  transition: all 0.25s ease-in;
+}
+
+.background-colour-toggle:hover,
+.background-colour-toggle:focus-visible,
+.background-colour-toggle[aria-expanded="true"] {
+  opacity: 1;
+  outline: 2px solid var(--link-color, #2563EB);
+  outline-offset: 2px;
+}
+
+.background-colour-wheel,
+.background-colour-wheel-large {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: conic-gradient(#D95F59, #EFC94C, #75B798, #5B8FD9, #A475C4, #D95F59);
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.65);
+}
+
+.background-colour-picker {
+  position: absolute;
+  right: 4.2rem;
+  bottom: 0;
+  width: min(19rem, calc(100vw - 6rem));
+  padding: 1.2rem;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  border-radius: 0.5rem;
+  background: var(--alt-bg-color, #FFFFFF);
+  color: var(--alt-fg-color, #242424);
+  box-shadow: 0 0.6rem 1.5rem rgba(0, 0, 0, 0.18);
+  font-size: 1.4rem;
+  z-index: 101;
+}
+
+.background-colour-picker[hidden] {
+  display: none;
+}
+
+.background-colour-title {
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.background-colour-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 3.6rem;
+  cursor: pointer;
+}
+
+.background-colour-wheel-large {
+  flex: 0 0 3.6rem;
+  width: 3.6rem;
+  height: 3.6rem;
+}
+
+#background-colour-input {
+  position: absolute;
+  width: 3.6rem;
+  height: 3.6rem;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.background-colour-help {
+  margin: 0.75rem 0;
+  font-size: 0.9em;
+  opacity: 0.75;
+}
+
+.background-colour-previews {
+  display: flex;
+  gap: 1rem;
+  margin: 0.75rem 0 1rem;
+}
+
+.background-colour-previews span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.background-colour-previews i {
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+}
+
+.background-colour-reset {
+  width: 100%;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid currentColor;
+  border-radius: 0.35rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.background-colour-reset:hover,
+.background-colour-reset:focus-visible {
+  color: var(--link-color, #2563EB);
+}
+
+body.colorscheme-dark .background-colour-picker {
+  border-color: rgba(147, 176, 255, 0.45);
+}
+
+@media (prefers-color-scheme: dark) {
+  body.colorscheme-auto .background-colour-picker {
+    border-color: rgba(147, 176, 255, 0.45);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .background-colour-picker {
+    right: 0;
+    bottom: 4.2rem;
+  }
+}
