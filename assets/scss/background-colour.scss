@@ -5,20 +5,20 @@
   --custom-background-selection: #F6F4EF;
 }
 
-body {
+html body {
   background-color: var(--custom-light-background);
 }
 
-body.colorscheme-dark {
+html body.colorscheme-dark {
   background-color: var(--custom-dark-background);
 }
 
-body.colorscheme-auto {
+html body.colorscheme-auto {
   background-color: var(--custom-light-background);
 }
 
 @media (prefers-color-scheme: dark) {
-  body.colorscheme-auto {
+  html body.colorscheme-auto {
     background-color: var(--custom-dark-background);
   }
 }
