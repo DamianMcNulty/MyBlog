@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const hue = hsl.s < 4 ? 45 : hsl.h;
         return {
             source: source,
-            light: hslToHex(hue, 18, 96),
-            dark: hslToHex(hue + 180, 14, 15)
+            light: hslToHex(hue, 32, 91),
+            dark: hslToHex(hue + 180, 22, 18)
         };
     }
 
