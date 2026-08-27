@@ -1,9 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
     const root = document.documentElement;
-    const toggle = document.getElementById('background-colour-toggle');
-    const picker = document.getElementById('background-colour-picker');
+    const body = document.body;
+    const toggle = document.getElementById('appearance-toggle');
+    const picker = document.getElementById('appearance-picker');
     const input = document.getElementById('background-colour-input');
     const reset = document.getElementById('background-colour-reset');
+    const modeButtons = document.querySelectorAll('[data-appearance-mode]');
     const lightPreview = document.getElementById('background-light-preview');
     const darkPreview = document.getElementById('background-dark-preview');
     const storageKey = 'blog-background-colour';
@@ -82,6 +84,47 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
+    function currentTheme() {
+        if (body.classList.contains('colorscheme-auto')) return 'auto';
+        return body.classList.contains('colorscheme-dark') ? 'dark' : 'light';
+    }
+
+    function updateModeButtons() {
+        const theme = currentTheme();
+        modeButtons.forEach(function(button) {
+            const selected = button.dataset.appearanceMode === theme;
+            button.setAttribute('aria-pressed', String(selected));
+        });
+    }
+
+    function setTheme(theme) {
+        if (!['auto', 'light', 'dark'].includes(theme)) return;
+        body.classList.remove('colorscheme-auto', 'colorscheme-light', 'colorscheme-dark');
+        if (typeof window.setTheme === 'function') {
+            window.setTheme(theme);
+        } else {
+            body.classList.add('colorscheme-' + theme);
+            root.style.colorScheme = theme;
+        }
+        if (typeof window.rememberTheme === 'function') {
+            window.rememberTheme(theme);
+        } else {
+            try { localStorage.setItem('colorscheme', theme); } catch (_) {}
+        }
+        updateModeButtons();
+    }
+
+    function keepAutomaticTheme() {
+        try {
+            if (localStorage.getItem('colorscheme') !== 'auto') return;
+        } catch (_) {
+            return;
+        }
+        body.classList.remove('colorscheme-auto', 'colorscheme-light', 'colorscheme-dark');
+        if (typeof window.setTheme === 'function') window.setTheme('auto');
+        updateModeButtons();
+    }
+
     function closePicker() {
         picker.hidden = true;
         toggle.setAttribute('aria-expanded', 'false');
@@ -93,6 +136,20 @@ document.addEventListener('DOMContentLoaded', function() {
         toggle.setAttribute('aria-expanded', String(!isOpen));
         if (isOpen) toggle.focus();
     });
+
+    modeButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            setTheme(button.dataset.appearanceMode);
+        });
+    });
+
+    document.addEventListener('themeChanged', updateModeButtons);
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (systemTheme.addEventListener) {
+        systemTheme.addEventListener('change', keepAutomaticTheme);
+    } else if (systemTheme.addListener) {
+        systemTheme.addListener(keepAutomaticTheme);
+    }
 
     input.addEventListener('input', function() {
         applyColours(deriveColours(input.value), true);
@@ -121,4 +178,10 @@ document.addEventListener('DOMContentLoaded', function() {
     try { saved = JSON.parse(localStorage.getItem(storageKey)); } catch (_) {}
     const validSaved = saved && /^#[0-9A-Fa-f]{6}$/.test(saved.source) && /^#[0-9A-Fa-f]{6}$/.test(saved.light) && /^#[0-9A-Fa-f]{6}$/.test(saved.dark);
     applyColours(validSaved ? saved : defaults, false);
+
+    if (!localStorage.getItem('colorscheme') && typeof window.setTheme === 'function') {
+        setTheme('auto');
+    } else {
+        updateModeButtons();
+    }
 });
