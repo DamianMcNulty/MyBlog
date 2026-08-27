@@ -48,10 +48,10 @@ maxSeeAlsoItems = 5
 # Custom CSS
 customCSS = []
 # Custom SCSS, file path is relative to Hugo's asset folder (default: {your project root}/assets)
-customSCSS = ["scss/post-typography.scss", "scss/post-colors.scss"]
+customSCSS = ["scss/post-typography.scss", "scss/post-colors.scss", "scss/background-colour.scss"]
 
 # Custom JS
-customJS = ["js/content-switcher.js"]
+customJS = ["js/content-switcher.js", "js/background-colour.js"]
 
 # Custom remote JS files
 customRemoteJS = []

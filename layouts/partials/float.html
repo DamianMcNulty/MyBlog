@@ -1,0 +1,26 @@
+{{ if not .Site.Params.hideColorSchemeToggle }}
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle" role="button" tabindex="0" aria-label="Toggle colour scheme">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+
+    <button id="background-colour-toggle" class="background-colour-toggle" type="button" aria-controls="background-colour-picker" aria-expanded="false" aria-label="Customise background colours" title="Customise background colours">
+        <span class="background-colour-wheel" aria-hidden="true"></span>
+    </button>
+
+    <div id="background-colour-picker" class="background-colour-picker" hidden>
+        <p class="background-colour-title">Customise colours</p>
+        <label class="background-colour-control" for="background-colour-input">
+            <span class="background-colour-wheel-large" aria-hidden="true"></span>
+            <span>Choose a background tone</span>
+        </label>
+        <input id="background-colour-input" type="color" value="#F6F4EF" aria-describedby="background-colour-help">
+        <p id="background-colour-help" class="background-colour-help">Colours are softened for readability while keeping the selected tone visible.</p>
+        <div class="background-colour-previews" aria-label="Colour previews">
+            <span class="background-colour-preview"><i id="background-light-preview" aria-hidden="true"></i>Light background</span>
+            <span class="background-colour-preview"><i id="background-dark-preview" aria-hidden="true"></i>Dark background</span>
+        </div>
+        <button id="background-colour-reset" class="background-colour-reset" type="button">Reset to default</button>
+    </div>
+</div>
+{{ end }}
