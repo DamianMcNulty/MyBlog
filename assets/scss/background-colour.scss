@@ -23,7 +23,7 @@ html body.colorscheme-auto {
   }
 }
 
-.background-colour-toggle {
+.appearance-toggle {
   position: fixed;
   left: 2rem;
   bottom: 2rem;
@@ -43,15 +43,15 @@ html body.colorscheme-auto {
   transition: all 0.25s ease-in;
 }
 
-.background-colour-toggle:hover,
-.background-colour-toggle:focus-visible,
-.background-colour-toggle[aria-expanded="true"] {
+.appearance-toggle:hover,
+.appearance-toggle:focus-visible,
+.appearance-toggle[aria-expanded="true"] {
   opacity: 1;
   outline: 2px solid var(--link-color, #2563EB);
   outline-offset: 2px;
 }
 
-.background-colour-wheel,
+.appearance-wheel,
 .background-colour-wheel-large {
   display: block;
   width: 100%;
@@ -61,7 +61,7 @@ html body.colorscheme-auto {
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.65);
 }
 
-.background-colour-picker {
+.appearance-picker {
   position: fixed;
   left: 2rem;
   bottom: 6.2rem;
@@ -78,13 +78,49 @@ html body.colorscheme-auto {
   z-index: 101;
 }
 
-.background-colour-picker[hidden] {
+.appearance-picker[hidden] {
   display: none;
 }
 
-.background-colour-title {
+.appearance-title {
   margin: 0 0 1rem;
   font-weight: 600;
+}
+
+.appearance-mode-section {
+  margin-bottom: 1.2rem;
+}
+
+.appearance-section-label {
+  margin: 0 0 0.6rem;
+  font-weight: 600;
+}
+
+.appearance-mode-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.appearance-mode-button {
+  padding: 0.45rem 0.35rem;
+  border: 1px solid currentColor;
+  border-radius: 0.3rem;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.appearance-mode-button:hover,
+.appearance-mode-button:focus-visible {
+  color: var(--link-color, #2563EB);
+}
+
+.appearance-mode-button[aria-pressed="true"] {
+  border-color: var(--link-color, #2563EB);
+  background: var(--link-color, #2563EB);
+  color: #FFFFFF;
 }
 
 .background-colour-control {
@@ -155,23 +191,23 @@ html body.colorscheme-auto {
   color: var(--link-color, #2563EB);
 }
 
-body.colorscheme-dark .background-colour-picker {
+body.colorscheme-dark .appearance-picker {
   border-color: rgba(147, 176, 255, 0.45);
 }
 
 @media (prefers-color-scheme: dark) {
-  body.colorscheme-auto .background-colour-picker {
+  body.colorscheme-auto .appearance-picker {
     border-color: rgba(147, 176, 255, 0.45);
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .background-colour-toggle {
+  .appearance-toggle {
     left: 1rem;
     bottom: 2rem;
   }
 
-  .background-colour-picker {
+  .appearance-picker {
     left: 1rem;
     bottom: 6.2rem;
     max-width: calc(100vw - 2rem);
