@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return {
             source: source,
             light: hslToHex(hue, 32, 91),
-            dark: hslToHex(hue + 180, 22, 18)
+            dark: hslToHex(hue + 180, 32, 20)
         };
     }
 
