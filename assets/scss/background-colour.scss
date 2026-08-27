@@ -119,22 +119,24 @@ html body.colorscheme-auto {
 
 .background-colour-previews {
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   margin: 0.75rem 0 1rem;
 }
 
-.background-colour-previews span {
+.background-colour-preview {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
 }
 
 .background-colour-previews i {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
+  flex: 0 0 auto;
+  width: 2.2rem;
+  height: 1.2rem;
   border: 1px solid currentColor;
-  border-radius: 50%;
+  border-radius: 0.25rem;
 }
 
 .background-colour-reset {
