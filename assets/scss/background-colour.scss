@@ -24,13 +24,15 @@ html body.colorscheme-auto {
 }
 
 .background-colour-toggle {
-  position: relative;
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  margin-top: 0.6rem;
+  margin: 0;
   padding: 0.45rem;
   border: 0;
   border-radius: 0.2rem;
@@ -60,9 +62,9 @@ html body.colorscheme-auto {
 }
 
 .background-colour-picker {
-  position: absolute;
-  right: 4.2rem;
-  bottom: 0;
+  position: fixed;
+  left: 2rem;
+  bottom: 6.2rem;
   width: 19rem;
   max-width: calc(100vw - 6rem);
   box-sizing: border-box;
@@ -162,8 +164,14 @@ body.colorscheme-dark .background-colour-picker {
 }
 
 @media only screen and (max-width: 768px) {
+  .background-colour-toggle {
+    left: 1rem;
+    bottom: 1rem;
+  }
+
   .background-colour-picker {
-    right: 0;
-    bottom: 4.2rem;
+    left: 1rem;
+    bottom: 5.2rem;
+    max-width: calc(100vw - 2rem);
   }
 }
