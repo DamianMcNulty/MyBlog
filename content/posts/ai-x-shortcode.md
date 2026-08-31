@@ -15,4 +15,4 @@ The shortcode syntax is straightforward: you add the X post ID inside the `tweet
 """
 +++
 
-{{< tweet user="@Behance" id="2094464170301227180" >}}
+{{< tweet user="Behance" id="2094464170301227180" >}}
