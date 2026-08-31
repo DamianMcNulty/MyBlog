@@ -1,0 +1,26 @@
+# Hugo build output
+/public/
+/resources/_gen/
+/.hugo_build.lock
+/hugo_stats.json
+
+# Obsidian
+.obsidian/
+
+# Local editor / OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Project-specific local folders
+obsidian/
+copilot/
+
+# Local tool metadata
+.agents/
+.claude/
+.copilot/
+.opencode/
