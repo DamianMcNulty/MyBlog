@@ -1,15 +1,20 @@
 {{ if not .Site.Params.hideColorSchemeToggle }}
 <div class="float-container">
-    <a id="dark-mode-toggle" class="colorscheme-toggle" role="button" tabindex="0" aria-label="Toggle colour scheme">
-        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
-    </a>
-
-    <button id="background-colour-toggle" class="background-colour-toggle" type="button" aria-controls="background-colour-picker" aria-expanded="false" aria-label="Customise background colours" title="Customise background colours">
-        <span class="background-colour-wheel" aria-hidden="true"></span>
+    <button id="appearance-toggle" class="appearance-toggle" type="button" aria-controls="appearance-picker" aria-expanded="false" aria-label="Open appearance settings" title="Appearance">
+        <span class="appearance-wheel" aria-hidden="true"></span>
     </button>
 
-    <div id="background-colour-picker" class="background-colour-picker" hidden>
-        <p class="background-colour-title">Customise colours</p>
+    <div id="appearance-picker" class="appearance-picker" hidden>
+        <p class="appearance-title">Appearance</p>
+        <div class="appearance-mode-section">
+            <p class="appearance-section-label">Display mode</p>
+            <div class="appearance-mode-options" role="group" aria-label="Display mode">
+                <button class="appearance-mode-button" type="button" data-appearance-mode="auto" aria-pressed="false">Auto</button>
+                <button class="appearance-mode-button" type="button" data-appearance-mode="light" aria-pressed="false">Light</button>
+                <button class="appearance-mode-button" type="button" data-appearance-mode="dark" aria-pressed="false">Dark</button>
+            </div>
+        </div>
+        <p class="appearance-section-label">Background colour</p>
         <label class="background-colour-control" for="background-colour-input">
             <span class="background-colour-wheel-large" aria-hidden="true"></span>
             <span>Choose a background tone</span>
@@ -20,7 +25,7 @@
             <span class="background-colour-preview"><i id="background-light-preview" aria-hidden="true"></i>Light background</span>
             <span class="background-colour-preview"><i id="background-dark-preview" aria-hidden="true"></i>Dark background</span>
         </div>
-        <button id="background-colour-reset" class="background-colour-reset" type="button">Reset to default</button>
+        <button id="background-colour-reset" class="background-colour-reset" type="button">Reset background colour</button>
     </div>
 </div>
 {{ end }}
