@@ -8,7 +8,6 @@ authors = []
 tags = ["X", "Hugo", "Shortcodes"]
 categories = ["Web Development"]
 series = []
-+++
 ai_content = """
 The X post shortcode is a simple way to embed a tweet or post inside a Hugo page without writing the embed code manually.
 
