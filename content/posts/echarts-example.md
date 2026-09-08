@@ -1,7 +1,7 @@
 +++
 title = "ECharts Example"
 date = 2026-09-08T12:00:00Z
-draft = true
+draft = false
 toc = false
 ai_content = """
 ECharts is a JavaScript library for creating interactive data visualizations such as line charts, bar charts, pie charts, and scatter plots.
