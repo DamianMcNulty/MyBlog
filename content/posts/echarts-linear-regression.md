@@ -38,7 +38,8 @@ This example uses the `echarts` shortcode and the `ecStat` regression transform 
       "transform": {
         "type": "ecStat:regression",
         "config": {
-          "method": "linear"
+          "method": "linear",
+          "formulaOn": "end"
         }
       }
     }
