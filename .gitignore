@@ -24,3 +24,6 @@ copilot/
 .claude/
 .copilot/
 .opencode/
+.Rproj.user
+.Rhistory
+MyBlog.Rproj
