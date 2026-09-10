@@ -1,0 +1,8 @@
+{{ $id := .Page.Scratch.Get "mermaid_id" | default 0 }}
+{{ $id = add $id 1 }}
+{{ .Page.Scratch.Set "mermaid_id" $id }}
+{{ $diagramId := printf "mermaid-%d" $id }}
+
+<div id="{{ $diagramId }}" class="mermaid">
+  {{- .Inner | safeHTML }}
+</div>
