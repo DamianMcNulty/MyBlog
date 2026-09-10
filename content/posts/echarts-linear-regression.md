@@ -89,8 +89,7 @@ This example uses the `echarts` shortcode and the `ecStat` regression transform 
       },
       "label": {
         "show": true,
-        "position": "top",
-        "formatter": "regression"
+        "position": "end"
       }
     }
   ]
